@@ -1,8 +1,10 @@
 import type { Resume } from "@/types/resume";
+import { assuredResume } from "./assured";
 import { builderResume } from "./builder";
 import { mercuryResume } from "./mercury";
 
 export const resumes: Record<string, Resume> = {
+  assured: assuredResume,
   builder: builderResume,
   mercury: mercuryResume,
 };
