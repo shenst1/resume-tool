@@ -40,6 +40,10 @@ export type Resume = {
   slug: string;
   /** Shown as the big page heading. */
   pageTitle: string;
+  /** If set, used for the browser tab title instead of "Last, First - Role @ Company". */
+  metadataTitle?: string;
+  /** Heading for the summary block (default: SUMMARY). */
+  summarySectionTitle?: string;
   /** Job/company you're applying to. */
   target: {
     company: string;
@@ -47,8 +51,8 @@ export type Resume = {
     teamOrFocus?: string;
   };
   contact: Contact;
+  /** Single opening narrative (replaces separate About + Application blocks). */
   about: string;
-  application: string;
   skills: SkillCategory[];
   experience: ExperienceRole[];
   companyReferences: CompanyReference[];

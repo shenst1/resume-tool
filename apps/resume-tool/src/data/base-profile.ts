@@ -10,16 +10,20 @@ export const contact: Contact = {
   ],
 };
 
+/** Shared opening narrative for resumes that use the default summary. */
 export const about =
-  "I am a senior software engineer with 12+ years of experience building full-stack applications. I have a proven track record of architecting and shipping complex, user-focused products from concept to scale. I excel at balancing technical excellence with product impact, and I'm passionate about bridging the gap between technical complexity and user-friendly experiences.";
+  "Senior software engineer with 12+ years building full-stack products—from high-traffic public sites and long-lived commerce platforms to a founder-led product. I combine architecture, frontend craft, and product iteration: shipping end-to-end (TypeScript, React, Next.js, Node, PostgreSQL, cloud), including AI-enabled features. I’ve acted as technical lead in practice—pairing, code review, and guiding implementation—with no direct reports.";
+
+/** Standard education line (Finance; relevant for fintech / business context). */
+export const educationFinanceScu = "B.S. Finance, Santa Clara University — 2010";
 
 export const baseSkills: SkillCategory[] = [
   {
     label: "Frontend",
     items: [
       "TypeScript",
-      "React 19",
-      "Next.js 15",
+      "React",
+      "Next.js",
       "Tailwind CSS",
       "Shadcn UI",
       "React Hook Form",
@@ -42,8 +46,13 @@ export const baseSkills: SkillCategory[] = [
     ],
   },
   {
-    label: "Architecture",
-    items: ["Monorepos", "Microservices", "Event-driven Systems", "Performance Optimization"],
+    label: "Architecture & async",
+    items: [
+      "Monorepos",
+      "Async workflows (Inngest, webhooks, background jobs)",
+      "ETL pipelines",
+      "Performance optimization",
+    ],
   },
   {
     label: "Cloud & Tools",
@@ -83,7 +92,7 @@ export const experience: ExperienceRole[] = [
         heading: "Technical Achievements",
         bullets: [
           "AI Integration: Built advanced AI-powered features including plant identification from photos, contextual chatbot (Sage), and smart text extraction from plant tags using OpenAI's vision and language models",
-          "Modern Frontend Architecture: Implemented Next.js 15 with React 19, React Server Components, and TypeScript, achieving exceptional performance and developer experience",
+          "Modern Frontend Architecture: Implemented Next.js with React, React Server Components, and TypeScript, achieving exceptional performance and developer experience",
           "Complex Data Modeling: Designed and implemented sophisticated PostgreSQL schemas with Prisma, handling complex relationships between users, plants, folios, and media with 15+ interconnected models",
           "Content Management: Created sophisticated content management system with rich text editing, plant tagging, and flexible data structures",
         ],
@@ -100,7 +109,7 @@ export const experience: ExperienceRole[] = [
       {
         heading: "Client Case Study - AI Signage",
         bullets: [
-          "Delivered a production rollout for an independent garden center to automate plant signage generation",
+          "Delivered a production rollout for an independent garden center to automate plant signage generation; one independent retail customer in ongoing production who has been an enthusiastic reference",
           "Enabled bulk plant import (plain text) to printable signs in seconds; reduced a weekend-long manual process to minutes after initial setup",
           "Demonstrated ability to translate customer requirements into scalable technical solutions and shorten feedback loops",
         ],
@@ -133,8 +142,10 @@ export const experience: ExperienceRole[] = [
         bullets: [
           "Partnered with cross-functional teams in product and design to revamp critical user-facing features",
           "Spearheaded and guided a team through the successful adoption of Chakra UI, reducing bespoke components and establishing cohesive design patterns",
+          "Mentored engineers through pairing and code review in an informal technical lead capacity (no direct reports)",
           "Maintained exceptional unit test coverage of over 90% for the Tools team application, alongside comprehensive end-to-end testing",
           "Led the swift creation and deployment of a homepage reporting dashboard within the initial two months of joining",
+          "Role ended in a company-wide layoff affecting approximately one-third of employees",
         ],
       },
     ],
@@ -147,8 +158,9 @@ export const experience: ExperienceRole[] = [
     groups: [
       {
         bullets: [
-          "Architected a greenfield Next.js application for the primary admin interface of the Bloom product",
+          "Architected a greenfield Next.js application for the primary admin interface of the Bloom product; much of that stack remains in production across many winery clients today",
           "Engineered Ruby on Rails GraphQL API endpoints shared by multiple applications across mobile and web devices",
+          "Mentored engineers through pairing and code review in an informal technical lead capacity (no direct reports)",
           "Collaborated with designers using Figma, establishing component library standards usable by both engineering and design",
           "Integrated DatoCMS and extended application functionality through third-party API integrations (Shopify, Mailchimp, Stripe, Shipstation, ActiveCampaign)",
         ],
@@ -163,9 +175,11 @@ export const experience: ExperienceRole[] = [
     groups: [
       {
         bullets: [
+          "Built and operated ETL-style data pipelines and integrations supporting marketplace automation workflows",
           "Automated a client workflow using a Node.js/Express API and React.js, reducing the time to complete the task from 10-15 minutes to 10-30 seconds",
           "Modernized the primary legacy React.js application by moving from a custom Webpack process to react-scripts, resulting in a 50% reduction in production build size and a 60% reduction in NPM dependencies",
           "Reduced development machine CPU usage from 75% to <5% by simplifying the build pipeline and dependency graph",
+          "Role ended in a company-wide layoff",
         ],
       },
     ],
@@ -178,7 +192,7 @@ export const experience: ExperienceRole[] = [
     groups: [
       {
         bullets: [
-          "Developed numerous web applications including The Washington State Fair, Georgetownbeer.com, WashingtonWine.org, TwoWolvesWine.com, Novaerus.com, WellAir, and Plasma-air.com",
+          "Developed numerous web applications including The Washington State Fair (sustained multi-year production; very high traffic during fair season), Georgetownbeer.com, WashingtonWine.org, TwoWolvesWine.com, Novaerus.com, WellAir, and Plasma-air.com",
           "Built a standalone Ruby gem Content Management System, enabling simplified content management within Ruby on Rails projects",
           "Transitioned the agency to modern technologies like GraphQL, Gatsby.js, and React.js, improving delivery times for new projects",
           "Bloom.wine Product Development: Built extensive reporting features using complex PostgreSQL queries and interactive filtering, saving clients thousands of hours on previously manual tasks",

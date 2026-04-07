@@ -9,8 +9,8 @@ interface ResumeTemplateProps {
 }
 
 export function ResumeTemplate({ data }: ResumeTemplateProps) {
-  const applicationTitle = `${data.target.company.toUpperCase()} APPLICATION`;
-  
+  const summaryTitle = data.summarySectionTitle ?? "SUMMARY";
+
   return (
     <div className="max-w-4xl mx-auto p-5">
       <ResumeHeader 
@@ -18,12 +18,8 @@ export function ResumeTemplate({ data }: ResumeTemplateProps) {
         title={data.pageTitle}
       />
       
-      <ResumeSection title="ABOUT ME">
+      <ResumeSection title={summaryTitle}>
         <p className="text-gray-700 leading-relaxed">{data.about}</p>
-      </ResumeSection>
-      
-      <ResumeSection title={applicationTitle}>
-        <p className="text-gray-700 leading-relaxed">{data.application}</p>
       </ResumeSection>
       
       <ResumeSection title="SKILLS">

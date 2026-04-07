@@ -30,12 +30,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
   
-  const title = formatPageTitle(
-    resume.contact.name,
-    resume.target.role,
-    resume.target.company
-  );
-  
+  const title =
+    resume.metadataTitle ??
+    formatPageTitle(
+      resume.contact.name,
+      resume.target.role,
+      resume.target.company
+    );
+
   return {
     title,
   };

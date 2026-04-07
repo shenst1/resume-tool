@@ -1,4 +1,4 @@
-import { about, baseSkills, companyReferences, contact, experience } from "@/data/base-profile";
+import { baseSkills, companyReferences, contact, educationFinanceScu, experience } from "@/data/base-profile";
 import type { Resume, SkillCategory } from "@/types/resume";
 
 const builderSkills: SkillCategory[] = [
@@ -19,11 +19,10 @@ export const builderResume: Resume = {
     teamOrFocus: "Fusion",
   },
   contact,
-  about,
-  application:
-    "As an early adopter of headless CMS platforms, I've spent years understanding the unique challenges of making developer-centric tools accessible to non-technical users. At Ply Interactive, I built our in-house CMS from the ground up, and I've extensively used DatoCMS across multiple projects. My experience building Plantfolio, implementing AI-powered features, and owning the full product cycle from customer discovery to production directly aligns with Builder.io's need for engineers who can partner with Product and Design. As a top 1% user of Cursor IDE, I'm an expert with AI-assisted development tools and understand how AI can bridge the gap between intent and execution.",
+  about:
+    "Senior software engineer with 12+ years building full-stack products—from agency CMS work to a founder-led product. I've spent years on headless CMS challenges: at Ply I built an in-house CMS as a Ruby gem, and I've shipped extensively with DatoCMS. Plantfolio sharpened AI-powered features and owning the full cycle from customer discovery to production—aligned with Fusion's need to partner with Product and Design. I act as technical lead in practice (pairing, code review, no direct reports). As a top 1% Cursor user, I'm fluent in AI-assisted development and how AI bridges intent and execution.",
   skills: builderSkills,
   experience,
   companyReferences,
+  education: educationFinanceScu,
 };
-

@@ -1,8 +1,8 @@
 import {
-  about,
   baseSkills,
   companyReferences,
   contact,
+  educationFinanceScu,
   experience,
 } from "@/data/base-profile";
 import type { Resume, SkillCategory } from "@/types/resume";
@@ -31,11 +31,10 @@ export const rampResume: Resume = {
     teamOrFocus: "Juno",
   },
   contact,
-  about,
-  application:
-    "Juno’s mission—fixing guest travel and expense with a modern, full-stack platform—maps directly to what I’ve built at Plantfolio: complex booking-adjacent workflows, PostgreSQL-backed data models, Stripe for real money, and AI features that reduce manual coordination. I’m fluent in TypeScript, React, and PostgreSQL, comfortable owning ambiguous problems end-to-end, and I’ve shipped integrations and payment flows at Bloom.wine and Tilia alongside product-led full-stack work. I want to help guests and admins move from fragmented processes to a cohesive experience, and to build the payments and agent-assisted tooling that makes that reliable at scale.",
+  about:
+    "Senior software engineer with 12+ years building full-stack products; Juno’s mission—better guest travel and expense on a modern stack—maps to what I’ve shipped at Plantfolio: complex workflows, PostgreSQL-backed models, Stripe for real money, and AI to cut manual coordination. I’m fluent in TypeScript, React, and PostgreSQL, comfortable owning ambiguous problems end-to-end, and I’ve delivered integrations and payment flows at Bloom.wine and Tilia alongside product-led work. I act as technical lead informally (pairing, code review). I want to help guests and admins move from fragmented processes to a cohesive experience and to build reliable payments and agent-assisted tooling at scale.",
   skills: rampSkills,
   experience,
   companyReferences,
-  education: "Bachelor of Science in Finance - Santa Clara University",
+  education: educationFinanceScu,
 };

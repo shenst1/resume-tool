@@ -51,8 +51,7 @@ Navigate to `/jobs/[slug]` to view a specific resume. For example:
        teamOrFocus: "Optional Team/Focus",
      },
      contact,
-     about, // or customize
-     application: "Your application note here...",
+     about: "Single summary + pitch (one block)...",
      skills: baseSkills, // or customize
      experience, // or customize
      companyReferences,
@@ -73,7 +72,7 @@ Navigate to `/jobs/[slug]` to view a specific resume. For example:
 
 - **Skills**: Modify `baseSkills` in `src/data/base-profile.ts` or create custom skill arrays per resume
 - **Experience**: Update `experience` array in `src/data/base-profile.ts` or override per resume
-- **About/Application**: Customize the `about` and `application` fields per resume
+- **Summary**: Customize the `about` field per resume (one opening narrative)
 
 ## Printing/Saving as PDF
 
@@ -84,7 +83,7 @@ Navigate to `/jobs/[slug]` to view a specific resume. For example:
 
 ## Tech Stack
 
-- **Next.js 16** - React framework with App Router
+- **Next.js** - React framework with App Router
 - **TypeScript** - Type safety
 - **Tailwind CSS** - Styling
 - **Inter Font** - Typography via `next/font`
