@@ -141,6 +141,7 @@ export const experience: ExperienceRole[] = [
       {
         bullets: [
           "Partnered with cross-functional teams in product and design to revamp critical user-facing features",
+          "Built and shipped work in support of KYC, identity verification, and risk-adjacent tooling as part of Tilia’s payments platform (tools team context)",
           "Spearheaded and guided a team through the successful adoption of Chakra UI, reducing bespoke components and establishing cohesive design patterns",
           "Mentored engineers through pairing and code review in an informal technical lead capacity (no direct reports)",
           "Maintained exceptional unit test coverage of over 90% for the Tools team application, alongside comprehensive end-to-end testing",

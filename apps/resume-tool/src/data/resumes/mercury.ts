@@ -1,23 +1,49 @@
 import { baseSkills, companyReferences, contact, educationFinanceScu, experience } from "@/data/base-profile";
 import type { Resume, SkillCategory } from "@/types/resume";
 
-const mercurySkills: SkillCategory[] = [
-  ...baseSkills.slice(0, 2),
-  ...baseSkills.slice(2),
+const mercuryRiskSkills: SkillCategory[] = [
+  {
+    label: "AI & production ML",
+    items: [
+      "OpenAI API",
+      "AI SDK",
+      "Vector embeddings & RAG",
+      "LLM features shipped to production (vision, chat, extraction, orchestration)",
+      "Iterating toward reliable automation over manual review loops",
+    ],
+  },
+  {
+    label: "Risk & fintech",
+    items: [
+      "KYC and identity verification tooling (Tilia, payments platform)",
+      "Payments and fintech product surfaces",
+      "B.S. Finance, Santa Clara University",
+    ],
+  },
+  {
+    label: "Platform engineering",
+    items: [
+      "Full-stack delivery (TypeScript, React, Next.js, Node, PostgreSQL)",
+      "Third-party APIs and integration-heavy systems",
+      "Monorepos, async workflows, observability-minded delivery",
+    ],
+  },
+  baseSkills[4],
 ];
 
 export const mercuryResume: Resume = {
   slug: "mercury",
-  pageTitle: "Shenstone, Andrew - Application for Senior Frontend Engineer - Payments @ Mercury",
+  pageTitle:
+    "Shenstone, Andrew - Application for Senior Software Engineer - Risk (AI & Automation) @ Mercury",
   target: {
     company: "Mercury",
-    role: "Senior Frontend Engineer",
-    teamOrFocus: "Payments",
+    role: "Senior Software Engineer",
+    teamOrFocus: "Risk (AI & Automation)",
   },
   contact,
   about:
-    "Senior software engineer with 12+ years shipping full-stack products from concept to scale. I'm excited to help shape Mercury's greenfield work: Plantfolio—from monorepo and AI features to production B2B and consumer paths—matches the need for strong technical direction with UX at the center. My B.S. in Finance (Santa Clara) plus fintech experience at Tilia ground how I build products founders and operators rely on daily. I thrive in ambiguity, provide informal technical leadership through pairing and code review, and trade off speed vs. quality deliberately on scalable, maintainable systems.",
-  skills: mercurySkills,
+    "Senior software engineer with 12+ years building full-stack products where correctness, integrations, and operator trust matter. At Plantfolio I shipped production AI end to end: identification from photos, contextual assistants, RAG-style retrieval, and workflows that replace repetitive manual steps. At Tilia I worked on KYC, identity verification, and risk-adjacent tooling in a payments context, alongside high-coverage delivery and mentoring through pairing and code review. My finance degree grounds how I think about risk and incentives. I want to help Mercury build agentic, well-observed automation in Risk: clear outcomes, careful rollouts, and systems that stay understandable as they scale.",
+  skills: mercuryRiskSkills,
   experience,
   companyReferences,
   education: educationFinanceScu,
