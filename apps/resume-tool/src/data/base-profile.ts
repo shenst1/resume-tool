@@ -12,7 +12,7 @@ export const contact: Contact = {
 
 /** Shared opening narrative for resumes that use the default summary. */
 export const about =
-  "Senior software engineer with 12+ years building full-stack products—from high-traffic public sites and long-lived commerce platforms to a founder-led product. I combine architecture, frontend craft, and product iteration: shipping end-to-end (TypeScript, React, Next.js, Node, PostgreSQL, cloud), including AI-enabled features. I’ve acted as technical lead in practice—pairing, code review, and guiding implementation—with no direct reports.";
+  "Senior software engineer with 12+ years building full-stack products—from high-traffic public sites and long-lived commerce platforms to a founder-led product. I combine architecture, frontend craft, and product iteration: shipping end-to-end (TypeScript, React, React Native, Next.js, Node, PostgreSQL, cloud), including AI-enabled features. I’ve acted as technical lead in practice—pairing, code review, and guiding implementation—with no direct reports.";
 
 /** Standard education line (Finance; relevant for fintech / business context). */
 export const educationFinanceScu = "B.S. Finance, Santa Clara University — 2010";
@@ -23,6 +23,7 @@ export const baseSkills: SkillCategory[] = [
     items: [
       "TypeScript",
       "React",
+      "React Native",
       "Next.js",
       "Tailwind CSS",
       "Shadcn UI",
@@ -94,6 +95,7 @@ export const experience: ExperienceRole[] = [
           "AI Integration: Built advanced AI-powered features including plant identification from photos, contextual chatbot (Sage), and smart text extraction from plant tags using OpenAI's vision and language models",
           "Modern Frontend Architecture: Implemented Next.js with React, React Server Components, and TypeScript, achieving exceptional performance and developer experience",
           "Complex Data Modeling: Designed and implemented sophisticated PostgreSQL schemas with Prisma, handling complex relationships between users, plants, folios, and media with 15+ interconnected models",
+          "Supabase to Neon: Shipped on Supabase (PostgreSQL with Row-Level Security policies for multi-tenant isolation) before migrating the data layer to Neon; strong hands-on experience with RLS and Postgres-centric access control",
           "Content Management: Created sophisticated content management system with rich text editing, plant tagging, and flexible data structures",
         ],
       },
@@ -163,7 +165,7 @@ export const experience: ExperienceRole[] = [
           "Engineered Ruby on Rails GraphQL API endpoints shared by multiple applications across mobile and web devices",
           "Mentored engineers through pairing and code review in an informal technical lead capacity (no direct reports)",
           "Collaborated with designers using Figma, establishing component library standards usable by both engineering and design",
-          "Integrated DatoCMS and extended application functionality through third-party API integrations (Shopify, Mailchimp, Stripe, Shipstation, ActiveCampaign)",
+          "Integrated DatoCMS and extended application functionality through third-party API integrations (Shopify, Mailchimp, Stripe, Shipstation, ActiveCampaign); all Bloom winery clients were on Shopify Plus",
         ],
       },
     ],
@@ -192,8 +194,16 @@ export const experience: ExperienceRole[] = [
     end: "July 2019",
     groups: [
       {
+        heading: "React Native",
         bullets: [
-          "Developed numerous web applications including The Washington State Fair (sustained multi-year production; very high traffic during fair season), Georgetownbeer.com, WashingtonWine.org, TwoWolvesWine.com, Novaerus.com, WellAir, and Plasma-air.com",
+          "Shipped multiple production React Native applications for agency clients—cross-platform mobile apps delivered end to end",
+          "Washington State Fair: React Native app in sustained multi-year production; very high traffic during fair season, from tens of thousands of users into the hundreds of thousands cumulatively over seasons",
+        ],
+      },
+      {
+        heading: "Web & platforms",
+        bullets: [
+          "Developed numerous web applications including Georgetownbeer.com, WashingtonWine.org, TwoWolvesWine.com, Novaerus.com, WellAir, and Plasma-air.com",
           "Built a standalone Ruby gem Content Management System, enabling simplified content management within Ruby on Rails projects",
           "Transitioned the agency to modern technologies like GraphQL, Gatsby.js, and React.js, improving delivery times for new projects",
           "Bloom.wine Product Development: Built extensive reporting features using complex PostgreSQL queries and interactive filtering, saving clients thousands of hours on previously manual tasks",
@@ -222,7 +232,8 @@ export const companyReferences: CompanyReference[] = [
   {
     name: "Bloom.wine",
     years: "2020-2022",
-    description: "Leader in commerce services for the alcohol industry",
+    description:
+      "Commerce services for the alcohol industry; all clients on Shopify Plus",
     href: "https://bloom.wine/",
   },
   {
@@ -235,7 +246,7 @@ export const companyReferences: CompanyReference[] = [
     name: "Ply Interactive Inc",
     years: "2014-2019",
     description:
-      "Boutique agency specializing in pixel-perfect custom websites and mobile applications; developed Bloom.wine product internally (2017-2019)",
+      "Boutique agency: web and production React Native apps (e.g. Washington State Fair at major scale); developed Bloom.wine product internally (2017-2019)",
   },
 ];
 
