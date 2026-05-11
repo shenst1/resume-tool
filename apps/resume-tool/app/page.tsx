@@ -1,5 +1,14 @@
 import Link from "next/link";
-import { getAllResumeSlugs } from "@/data/resumes";
+import { getAllResumeSlugs, getResume } from "@/data/resumes";
+
+function listLabelForSlug(slug: string): string {
+  const home = getResume(slug)?.homeListLabel;
+  if (home) return home;
+  return slug
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
 
 export default function Home() {
   const slugs = getAllResumeSlugs().filter((s) => s !== "base");
@@ -45,7 +54,7 @@ export default function Home() {
               href={`/jobs/${slug}`}
               className="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow border border-gray-200"
             >
-              <h2 className="text-xl font-semibold capitalize">{slug}</h2>
+              <h2 className="text-xl font-semibold">{listLabelForSlug(slug)}</h2>
               <p className="text-gray-600 text-sm mt-1">View resume</p>
             </Link>
           ))}

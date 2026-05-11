@@ -50,6 +50,8 @@ export type Resume = {
     role: string;
     teamOrFocus?: string;
   };
+  /** Optional label for the app home page list (defaults from slug if unset). */
+  homeListLabel?: string;
   contact: Contact;
   /** Single opening narrative (replaces separate About + Application blocks). */
   about: string;

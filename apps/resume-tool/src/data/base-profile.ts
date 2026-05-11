@@ -12,7 +12,7 @@ export const contact: Contact = {
 
 /** Shared opening narrative for resumes that use the default summary. */
 export const about =
-  "Senior software engineer with 12+ years building full-stack products—from high-traffic public sites and long-lived commerce platforms to a founder-led product. I combine architecture, frontend craft, and product iteration: shipping end-to-end (TypeScript, React, React Native, Next.js, Node, PostgreSQL, cloud), including AI-enabled features. I’ve acted as technical lead in practice—pairing, code review, and guiding implementation—with no direct reports.";
+  "Senior software engineer with 12+ years building full-stack products—from high-traffic public sites and long-lived commerce platforms to a founder-led product. I combine architecture, frontend craft, and product iteration: shipping end-to-end (TypeScript, React, React Native, Flutter (Dart), Next.js, Node, PostgreSQL, cloud), including AI-enabled features. I’ve acted as technical lead in practice—pairing, code review, and guiding implementation—with no direct reports.";
 
 /** Standard education line (Finance; relevant for fintech / business context). */
 export const educationFinanceScu = "B.S. Finance, Santa Clara University — 2010";
@@ -24,6 +24,8 @@ export const baseSkills: SkillCategory[] = [
       "TypeScript",
       "React",
       "React Native",
+      "Flutter",
+      "Dart",
       "Next.js",
       "Tailwind CSS",
       "Shadcn UI",
@@ -65,6 +67,7 @@ export const baseSkills: SkillCategory[] = [
       "Clerk Auth",
       "Stripe",
       "Git",
+      "CircleCI",
       "CI/CD",
       "pnpm",
       "Turbo",
@@ -163,6 +166,7 @@ export const experience: ExperienceRole[] = [
         bullets: [
           "Architected a greenfield Next.js application for the primary admin interface of the Bloom product; much of that stack remains in production across many winery clients today",
           "Engineered Ruby on Rails GraphQL API endpoints shared by multiple applications across mobile and web devices",
+          "CI/CD with CircleCI for build, test, and deployment workflows alongside the Next.js and Rails stack",
           "Mentored engineers through pairing and code review in an informal technical lead capacity (no direct reports)",
           "Collaborated with designers using Figma, establishing component library standards usable by both engineering and design",
           "Integrated DatoCMS and extended application functionality through third-party API integrations (Shopify, Mailchimp, Stripe, Shipstation, ActiveCampaign); all Bloom winery clients were on Shopify Plus",

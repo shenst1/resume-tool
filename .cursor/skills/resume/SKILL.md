@@ -34,7 +34,7 @@ description: >-
    - `slug`, `pageTitle` (e.g. `Shenstone, Andrew - Application for <Role> @ <Company>`),
    - `target: { company, role, teamOrFocus? }`,
    - `contact` from `@/data/base-profile`,
-   - **`about`** — One **SUMMARY** block: 2–4 tight sentences tying their posting (stack, product, problems) to the user’s experience; avoid repeating the full `about` from `base-profile` verbatim unless appropriate.
+   - **`about`** — One **SUMMARY** block: 2–4 tight sentences tying their posting (stack, product, problems) to the user’s experience; avoid repeating the full `about` from `base-profile` verbatim unless appropriate. Write in **plain, human language** (what you shipped, what you have not used yet, why transfer still applies)—**no insider mash-ups** or unexplained shorthand (e.g. say “I have not used Contentful in production; I have done the same structured-content work with DatoCMS,” not invented phrases like “logo ramp”).
    - **`skills`** — Start from `baseSkills`; add/reorder categories or items to mirror the posting (e.g. payments, CMS, AI). Keep honest: don’t invent skills.
    - **`experience`** — Import from `base-profile` unless a role-specific tweak is needed;
    - **`companyReferences`** — From `base-profile` unless a one-line tweak helps.
@@ -115,3 +115,4 @@ Template:
 - Claiming **direct reports** or **official** titles the user did not state.
 - **Duplicate** `base` resume in the home page list — new slugs appear in the main Resumes list; do not special-case unless the user asks.
 - Creating **marketing fluff** or unverifiable SWOT claims; prefer “unknown / verify in interview.”
+- **Opaque jargon in `about` or skill lines** — If a phrase needs a second read, rewrite it. Prefer full sentences over hiring slang or brand shorthand unless the term is standard (e.g. “SEO,” “CMS”).
