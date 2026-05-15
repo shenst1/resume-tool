@@ -13,7 +13,7 @@ description: >-
 ## Outcomes (deliver every time)
 
 1. **Chat summary** — Short notes on the company, role fit, and anything uncertain (flag assumptions).
-2. **Resume in the app** — New slug under `apps/resume-tool`, registered in `src/data/resumes/index.ts`, `pnpm run build` passes.
+2. **Resume in the app** — New slug under `apps/resume-tool`, registered in `src/data/resumes/index.ts`, includes **`createdAt`** (see below), `pnpm run build` passes.
 3. **Prospect folder** — `prospects/<FolderName>/` with at least `job.md` and `swot.md`; `resumes/` present for the user’s PDF later.
 4. **No PDF generation** — User prints from the browser (Cmd/Ctrl+P → Save as PDF) after review.
 
@@ -31,10 +31,11 @@ description: >-
 ## Resume implementation (`apps/resume-tool`)
 
 1. **Add** `src/data/resumes/<slug>.ts` exporting `<camelCase>Resume: Resume` with:
-   - `slug`, `pageTitle` (e.g. `Shenstone, Andrew - Application for <Role> @ <Company>`),
+   - `slug`, **`createdAt`** — ISO calendar date **`YYYY-MM-DD`** for the day the tailored resume was added (use **today’s date** when creating it). This drives the home page (**Recently added** is the default tab): entries **without** `createdAt` are treated as older than five days and appear only under **Library**; with `createdAt`, the resume appears under **Recently added** (first five days) until that window passes, then **Library**. Omit only when intentionally backfilling legacy resumes (same behavior as missing).
+   - `pageTitle` (e.g. `Shenstone, Andrew - Application for <Role> @ <Company>`),
    - `target: { company, role, teamOrFocus? }`,
    - `contact` from `@/data/base-profile`,
-   - **`about`** — One **SUMMARY** block: 2–4 tight sentences tying their posting (stack, product, problems) to the user’s experience; avoid repeating the full `about` from `base-profile` verbatim unless appropriate. Write in **plain, human language** (what you shipped, what you have not used yet, why transfer still applies)—**no insider mash-ups** or unexplained shorthand (e.g. say “I have not used Contentful in production; I have done the same structured-content work with DatoCMS,” not invented phrases like “logo ramp”).
+   - **`about`** — **Scannable SUMMARY** recruiters can skim in ~15 seconds: aim for **~80–140 words** in **2–3 short paragraphs**, separated by a **blank line** in the string so the renderer prints distinct blocks; **lead with role fit**, then proof, then honest gaps/ramp—defer proof points to EXPERIENCE. Write in **plain, human language** (what you shipped, what you have not used yet, why transfer still applies)—**no insider mash-ups** or unexplained shorthand (e.g. say “I have not used Contentful in production; I have done the same structured-content work with DatoCMS,” not invented phrases like “logo ramp”).
    - **`skills`** — Start from `baseSkills`; add/reorder categories or items to mirror the posting (e.g. payments, CMS, AI). Keep honest: don’t invent skills.
    - **`experience`** — Import from `base-profile` unless a role-specific tweak is needed;
    - **`companyReferences`** — From `base-profile` unless a one-line tweak helps.
@@ -105,7 +106,7 @@ Template:
 
 1. Parse posting + clarify company name and slug.
 2. Research (web + posting).
-3. Draft tailored `about` + skills; implement new resume file + `index.ts`.
+3. Draft tailored `about` + skills; implement new resume file (**include `createdAt: "YYYY-MM-DD"`**) + `index.ts`.
 4. Create `prospects/.../job.md` + `swot.md` + `resumes/`.
 5. Run `pnpm run build` in `apps/resume-tool`.
 6. Reply in chat with **brief** company/role notes and **where to preview** (`/jobs/<slug>`); remind user to export PDF when satisfied.
@@ -113,6 +114,7 @@ Template:
 ## Anti-patterns
 
 - Claiming **direct reports** or **official** titles the user did not state.
-- **Duplicate** `base` resume in the home page list — new slugs appear in the main Resumes list; do not special-case unless the user asks.
+- **Skipping `createdAt`** on **new** tailored resumes — always set it when adding an application today so the index tabs stay accurate.
+- **Duplicate** `base` resume in the home page list — new slugs appear in the Resumes section (Library / Recently added tabs); do not special-case unless the user asks.
 - Creating **marketing fluff** or unverifiable SWOT claims; prefer “unknown / verify in interview.”
 - **Opaque jargon in `about` or skill lines** — If a phrase needs a second read, rewrite it. Prefer full sentences over hiring slang or brand shorthand unless the term is standard (e.g. “SEO,” “CMS”).

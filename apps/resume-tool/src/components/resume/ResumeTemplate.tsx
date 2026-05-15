@@ -1,8 +1,9 @@
 import type { Resume } from "@/types/resume";
+import { ExperienceSection } from "./ExperienceSection";
+import { renderInlineBold } from "./renderInlineBold";
 import { ResumeHeader } from "./ResumeHeader";
 import { ResumeSection } from "./ResumeSection";
 import { SkillsSection } from "./SkillsSection";
-import { ExperienceSection } from "./ExperienceSection";
 
 interface ResumeTemplateProps {
   data: Resume;
@@ -10,6 +11,11 @@ interface ResumeTemplateProps {
 
 export function ResumeTemplate({ data }: ResumeTemplateProps) {
   const summaryTitle = data.summarySectionTitle ?? "SUMMARY";
+  const summaryParagraphs = data.about
+    .trim()
+    .split(/\n\s*\n/)
+    .map((p) => p.replace(/\s+/g, " ").trim())
+    .filter(Boolean);
 
   return (
     <div className="max-w-4xl mx-auto p-5">
@@ -19,7 +25,11 @@ export function ResumeTemplate({ data }: ResumeTemplateProps) {
       />
       
       <ResumeSection title={summaryTitle}>
-        <p className="text-gray-700 leading-relaxed">{data.about}</p>
+        <div className="space-y-3 text-gray-700 leading-relaxed">
+          {summaryParagraphs.map((paragraph) => (
+            <p key={paragraph}>{renderInlineBold(paragraph)}</p>
+          ))}
+        </div>
       </ResumeSection>
       
       <ResumeSection title="SKILLS">
@@ -38,8 +48,11 @@ export function ResumeTemplate({ data }: ResumeTemplateProps) {
       
       <ResumeSection title="COMPANY REFERENCE">
         <div className="space-y-2.5">
-          {data.companyReferences.map((ref, idx) => (
-            <p key={idx} className="text-gray-700 leading-relaxed">
+          {data.companyReferences.map((ref) => (
+            <p
+              key={`${ref.name}-${ref.years}-${ref.href ?? ""}`}
+              className="text-gray-700 leading-relaxed"
+            >
               <strong className="text-gray-800">{ref.name}</strong> ({ref.years}) - {ref.description}
               {ref.href && (
                 <> - <a href={ref.href} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">{ref.href.replace("https://", "").replace("http://", "")}</a></>

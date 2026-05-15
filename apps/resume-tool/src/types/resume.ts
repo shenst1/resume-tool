@@ -38,6 +38,11 @@ export type CompanyReference = {
 export type Resume = {
   /** Stable identifier used for routing. */
   slug: string;
+  /**
+   * When this tailored resume was added (`YYYY-MM-DD`, local calendar intent).
+   * Omitted → treated as older than five days on the home page (shows under Library).
+   */
+  createdAt?: string;
   /** Shown as the big page heading. */
   pageTitle: string;
   /** If set, used for the browser tab title instead of "Last, First - Role @ Company". */
@@ -53,7 +58,9 @@ export type Resume = {
   /** Optional label for the app home page list (defaults from slug if unset). */
   homeListLabel?: string;
   contact: Contact;
-  /** Single opening narrative (replaces separate About + Application blocks). */
+  /**
+   * Opening narrative for SUMMARY. Separate paragraphs with one blank line in the source string so the UI renders readable blocks; keep each paragraph short—detail belongs in EXPERIENCE.
+   */
   about: string;
   skills: SkillCategory[];
   experience: ExperienceRole[];

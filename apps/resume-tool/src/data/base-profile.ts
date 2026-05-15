@@ -11,8 +11,9 @@ export const contact: Contact = {
 };
 
 /** Shared opening narrative for resumes that use the default summary. */
-export const about =
-  "Senior software engineer with 12+ years building full-stack products—from high-traffic public sites and long-lived commerce platforms to a founder-led product. I combine architecture, frontend craft, and product iteration: shipping end-to-end (TypeScript, React, React Native, Flutter (Dart), Next.js, Node, PostgreSQL, cloud), including AI-enabled features. I’ve acted as technical lead in practice—pairing, code review, and guiding implementation—with no direct reports.";
+export const about = `Senior software engineer with 12+ years building full-stack products—from high-traffic sites and commerce platforms to a founder-led product—shipping TypeScript, React, React Native, Flutter (Dart), Next.js, Node, PostgreSQL, cloud, and AI-enabled features. Technical lead in practice through pairing, review, and implementation guidance (no direct reports).
+
+GraphQL shows up repeatedly in production: at Tilia we introduced an API and consumed it from our product; at Bloom, Rails GraphQL shared across web and mobile; earlier agency adoption too. It isn’t always how I’d sketch a greenfield API, but I’m fluent schema-through-client when that’s the stack.`;
 
 /** Standard education line (Finance; relevant for fintech / business context). */
 export const educationFinanceScu = "B.S. Finance, Santa Clara University — 2010";
@@ -36,7 +37,14 @@ export const baseSkills: SkillCategory[] = [
   },
   {
     label: "Backend",
-    items: ["Node.js", "PostgreSQL", "Prisma", "Server Actions", "API Design"],
+    items: [
+      "Node.js",
+      "PostgreSQL",
+      "Prisma",
+      "Server Actions",
+      "API Design",
+      "GraphQL (production-hardened; schema/resolvers and typed clients—not my default for brand-new APIs)",
+    ],
   },
   {
     label: "AI/ML",
@@ -147,6 +155,7 @@ export const experience: ExperienceRole[] = [
         bullets: [
           "Partnered with cross-functional teams in product and design to revamp critical user-facing features",
           "Built and shipped work in support of KYC, identity verification, and risk-adjacent tooling as part of Tilia’s payments platform (tools team context)",
+          "Introduced and evolved a GraphQL API on the platform while consuming it from our product—hands-on with both server-side schema/resolvers and client integration",
           "Spearheaded and guided a team through the successful adoption of Chakra UI, reducing bespoke components and establishing cohesive design patterns",
           "Mentored engineers through pairing and code review in an informal technical lead capacity (no direct reports)",
           "Maintained exceptional unit test coverage of over 90% for the Tools team application, alongside comprehensive end-to-end testing",

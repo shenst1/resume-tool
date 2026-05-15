@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ResumeSlugTabs } from "@/components/home/ResumeSlugTabs";
 import { getAllResumeSlugs, getResume } from "@/data/resumes";
 
 function listLabelForSlug(slug: string): string {
@@ -12,7 +13,15 @@ function listLabelForSlug(slug: string): string {
 
 export default function Home() {
   const slugs = getAllResumeSlugs().filter((s) => s !== "base");
-  
+  const resumeEntries = slugs.map((slug) => {
+    const r = getResume(slug);
+    return {
+      slug,
+      label: listLabelForSlug(slug),
+      createdAt: r?.createdAt,
+    };
+  });
+
   return (
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="max-w-2xl mx-auto">
@@ -46,19 +55,8 @@ export default function Home() {
             </p>
           </Link>
         </div>
-        <h2 className="text-lg font-semibold text-gray-700 mb-4">Resumes</h2>
-        <div className="space-y-4">
-          {slugs.map((slug) => (
-            <Link
-              key={slug}
-              href={`/jobs/${slug}`}
-              className="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow border border-gray-200"
-            >
-              <h2 className="text-xl font-semibold">{listLabelForSlug(slug)}</h2>
-              <p className="text-gray-600 text-sm mt-1">View resume</p>
-            </Link>
-          ))}
-        </div>
+        <h2 className="mb-4 text-lg font-semibold text-gray-700">Resumes</h2>
+        <ResumeSlugTabs entries={resumeEntries} />
       </div>
     </div>
   );
