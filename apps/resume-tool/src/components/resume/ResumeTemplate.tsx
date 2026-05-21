@@ -1,5 +1,6 @@
 import type { Resume } from "@/types/resume";
 import { ExperienceSection } from "./ExperienceSection";
+import { OutreachEmailBox } from "./OutreachEmailBox";
 import { renderInlineBold } from "./renderInlineBold";
 import { ResumeHeader } from "./ResumeHeader";
 import { ResumeSection } from "./ResumeSection";
@@ -19,6 +20,13 @@ export function ResumeTemplate({ data }: ResumeTemplateProps) {
 
   return (
     <div className="max-w-4xl mx-auto p-5">
+      {data.outreachEmail && (
+        <OutreachEmailBox
+          subject={data.outreachEmail.subject}
+          body={data.outreachEmail.body}
+          label={data.outreachEmail.label}
+        />
+      )}
       <ResumeHeader 
         contact={data.contact}
         title={data.pageTitle}

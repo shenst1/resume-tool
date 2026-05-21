@@ -1,30 +1,35 @@
-# SWOT — Curology (Senior Software Engineer)
+# SWOT — Curology (Senior Software Engineer, platform)
 
 ## Strengths
 
-- **Senior delivery:** 12+ years maps to **5–7+** requirement; mentorship, code review, and **technical leadership** without direct reports.
-- **Shopify Plus:** Bloom served **only Shopify Plus** merchants—strong match for Curology’s **Plus** requirement alongside **integrations** and **Polaris** standards.
-- **Full-stack craft:** **TypeScript**, **React**, **PostgreSQL/SQL**, **Node**, **APIs**, **testing**, **CI/CD**—matches the core technical list aside from Python emphasis.
-- **Trust-sensitive systems:** Tilia **KYC/identity**-adjacent work parallels **regulated consumer health** expectations (careful handling of identity and flows)—not clinical, but **disciplined** delivery.
-- **AWS & ops mindset:** Production **S3/EC2**; posting also wants **hands-on AWS/DevOps**—you can speak to **ownership** and willingness to deepen.
+- **Seniority:** 12+ years exceeds the 5–7+ bar; credible mentorship, code review, and informal technical lead without direct reports.
+- **Platform-shaped delivery:** Plantfolio monorepo with **Postgres/Prisma**, **Inngest/webhooks**, **AWS**, and a real **Mongo→Postgres** migration; maps to APIs, schemas, and event-driven work.
+- **Production APIs at scale:** Bloom **Rails GraphQL** + Next.js clients; Tilia **GraphQL** with **90%+** unit test coverage and KYC-adjacent tooling.
+- **Full-stack credibility:** Strong **TypeScript**, **React**, **Node**, **SQL**; CI/CD and automated testing are daily habits.
+- **AI-augmented engineering:** Cursor-top-user workflow aligns with posting’s AI fluency expectation when paired with architectural judgment.
+- **Regulated-adjacent mindset:** Tilia payments/identity work parallels careful handling of consumer health data (not clinical, but disciplined).
 
 ## Weaknesses
 
-- **Hydrogen + Oxygen:** Posting emphasizes **headless** with these frameworks; Bloom work was **Plus admin and integration** surfaces—not necessarily **Hydrogen storefronts** on Oxygen. Be ready to discuss **transferable patterns** or any Hydrogen exposure to add.
-- **Python:** Posting lists **Python** as a skilled language; your profile is **TypeScript/Node/Ruby**-weighted—position as **ramp** or **collaboration with Python services**, not expert claim.
-- **CSS-in-JS:** You use **Tailwind** and design systems heavily; be ready to discuss **styling architecture** (co-location, design tokens, component APIs) even if not Emotion/styled-components.
+- **Python:** Posting lists Python; primary production depth is **TypeScript/Node** and **Rails-shaped** services — honest ramp, not expert claim.
+- **Microservices migration lead:** User has distributed patterns and monolith-adjacent experience, not a titled **migration program owner** — screeners may keyword-match “microservices”; lead with APIs, events, and boundaries instead.
+- **NoSQL breadth:** Mongo history is real but Postgres is the current center; confirm depth expectations on document stores in interview.
+- **Curology-specific stack:** Public materials mention Python/Laravel/React/AWS; exact service map is **verify in interview**.
 
 ## Opportunities
 
-- **Mission fit:** Clear story on **patient trust**, **quality**, and **iterative delivery** in high-stakes product work.
-- **Curology allows AI for applications:** Using tools to refine materials is **explicitly welcome**—still prepare to **own every line** in interviews.
+- **Mission and scale:** Clear story on patient trust, reliable software, and owning production health during platform change.
+- **Posting allows AI for applications:** Refining materials with AI is explicitly welcome; still own every line in live interviews.
+- **Mentorship lane:** Role expects elevating mid/senior engineers — matches pairing/review track record.
 
 ## Threats
 
-- **Keyword filters** on **Hydrogen/Oxygen** may still be noisy—lead with **Plus + integrations** in recruiter screens.
-- **Location preference** (LA/SD)—if you are elsewhere, clarify **travel** comfort early.
+- **Keyword filters** on “microservices” or “Python” without reading context — summary and skills call out honest framing upfront.
+- **Older job descriptions** (Shopify/Hydrogen) may confuse recruiters if they mix postings — anchor conversation on **platform migration** role user applied to.
+- **Location preference** (LA/SD) — clarify remote + travel early if applicable.
 
 ## Notes
 
-- If you have **any** Hydrogen/Oxygen or **headless** project to cite, add **dated bullets** to `base-profile` and refresh `curology.ts`.
-- Prepare one **production incident** story and one **mentorship** story—posting emphasizes both.
+- Prepare one **production incident or outage** story and one **mentorship** story (posting emphasizes both).
+- Ask how far **monolith → microservices** has progressed and which observability/incident tools the team uses.
+- If user gains Python service ownership bullets, refresh `curology.ts` experience section via `base-profile`.

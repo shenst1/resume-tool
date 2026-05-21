@@ -1,34 +1,32 @@
-# SWOT — Customer.io (Senior Frontend Engineer)
-
-High-level; **verify in interviews** and public filings.
+# SWOT — Customer.io (Fullstack Product Engineer)
 
 ## Strengths
 
-- **Clear category:** Multi-channel lifecycle messaging is a **large, durable** B2B market; behavioral data story is differentiated vs blast-email tools.
-- **Transparent hiring:** Posting lists **salary band** and detailed **process** (including take-home), which reduces guesswork for candidates.
-- **Benefits narrative:** Strong **health coverage** and **parental leave** messaging (per posting) for US remote employees and families.
-- **Product surface:** Marketer-facing **workflow builders** and **messaging UIs** are complex frontend problems (good for senior IC impact).
+- **Durable category:** Behavioral messaging at scale; clear product story vs blast-email tools.
+- **Fullstack product role** fits end-to-end ownership and craft across UI + services.
+- **Transparent process** including take-home and salary band (per typical postings).
+- **AI in product and SDLC** matches your AI-native engineering narrative.
 
 ## Weaknesses
 
-- **Dual-stack reality:** **React + Ember** increases **cognitive load** and migration work; new hires must navigate legacy vs modern boundaries (ask how the team manages this).
-- **Competitive intensity:** Competes with **Iterable**, **Braze**, **Klaviyo** (email-centric), and others; feature parity and enterprise sales cycles create pressure.
-- **Deliverability & compliance:** Email/SMS channels face **carrier rules**, **spam reputation**, and **privacy** constraints that can slow shipping.
+- **React + Ember** dual stack adds migration and context-switch cost.
+- **Go** is required fluency; your deepest miles are Node/TS (ramp, not tenure).
+- **Take-home** step is time-intensive for candidates.
 
 ## Opportunities
 
-- **AI in the product and in the SDLC:** Positioning AI for **content**, **optimization**, and **internal productivity** can widen moat if executed responsibly.
-- **In-app and mobile messaging:** Expansion beyond email increases **frontend** surface (SDK-adjacent work may touch other teams).
-- **Remote Americas:** Talent access without relocation for US-oriented roles.
+- **Product engineer** lane values taste and ownership over narrow frontend-only scope.
+- **Public progress culture** (videos, writing) may suit candidates who mentor and document.
+- Remote **Americas** hiring.
 
 ## Threats
 
-- **Economic cycles:** Marketing budgets trim in downturns; messaging vendors can see **churn** or seat consolidation.
-- **Platform risk:** Dependence on **Apple/Google push** policies, **email client** behavior, and **third-party** identity data.
-- **Talent market:** Senior frontend hiring is competitive; **take-home** step filters some candidates but also costs candidate time.
+- Competition with Iterable, Braze, Klaviyo, and others.
+- Marketing budget cycles affect vendor growth.
+- Deliverability and compliance constraints on channels.
 
-## Notes to verify
+## Notes
 
-- **Ember roadmap:** Long-term plan (incremental migration, new features in React only, etc.).
-- **Design system** ownership between **product design** and **engineering**.
-- **On-call** and incident expectations for customer-facing UI outages vs backend pipeline issues.
+- Ask **Ember roadmap** and how new features choose React vs Ember.
+- Clarify **Go** service ownership vs frontend-heavy pods.
+- Prepare **take-home** time and system design stories for behavioral data scale.

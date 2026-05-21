@@ -40,7 +40,7 @@ export function ResumeSlugTabs({ entries }: { entries: ResumeIndexEntry[] }) {
           }`}
         >
           Recently added
-          <span className="ml-2 tabular-nums text-xs opacity-80">{`(< ${RECENT_RESUME_DAYS} days)`}</span>
+          <span className="ml-2 tabular-nums text-xs opacity-80">{`(last ${RECENT_RESUME_DAYS} days)`}</span>
         </button>
         <button
           type="button"

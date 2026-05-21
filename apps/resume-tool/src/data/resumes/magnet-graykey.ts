@@ -30,13 +30,13 @@ const magnetGraykeySkills: SkillCategory[] = [
   {
     label: "Security-aware engineering",
     items: [
-      "Auth & authorization patterns (Clerk; Supabase Row-Level Security)",
+      "Auth & authorization patterns (Clerk; Postgres/Neon with multi-tenant access control)",
       "Multi-tenant isolation patterns",
       "KYC and identity-adjacent tooling (payments platform context)",
       "Modern JavaScript security posture (sanitized boundaries, thoughtful client/server splits)",
     ],
   },
-  baseSkills.find((c) => c.label === "AI/ML") ?? baseSkills[3],
+  baseSkills.find((c) => c.label === "AI-native product & workflow") ?? baseSkills[3],
 ];
 
 export const magnetGraykeyResume: Resume = {

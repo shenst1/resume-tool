@@ -34,7 +34,7 @@ const earninSkills: SkillCategory[] = [
       "Cursor-class AI-assisted development in daily workflow",
     ],
   },
-  baseSkills.find((c) => c.label === "AI/ML") ?? baseSkills[3],
+  baseSkills.find((c) => c.label === "AI-native product & workflow") ?? baseSkills[3],
 ];
 
 export const earninSeniorFullstackResume: Resume = {

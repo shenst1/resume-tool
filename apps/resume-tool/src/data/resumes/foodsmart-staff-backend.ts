@@ -29,7 +29,7 @@ const foodsmartSkills: SkillCategory[] = [
       "Retool or similar low-code internal tools: limited production ownership; quick study for clinician and ops surfaces",
     ],
   },
-  baseSkills.find((c) => c.label === "AI/ML") ?? baseSkills[3],
+  baseSkills.find((c) => c.label === "AI-native product & workflow") ?? baseSkills[3],
 ];
 
 export const foodsmartStaffBackendResume: Resume = {

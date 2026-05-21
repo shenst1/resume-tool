@@ -31,7 +31,7 @@ const veevaSkills: SkillCategory[] = [
 
 export const veevaFrontEndResume: Resume = {
   slug: "veeva-front-end",
-  createdAt: "2026-05-14",
+  createdAt: "2026-05-18",
   pageTitle: "Shenstone, Andrew - Application for Front-End Software Engineer @ Veeva Systems",
   homeListLabel: "Veeva",
   target: {
@@ -40,11 +40,11 @@ export const veevaFrontEndResume: Resume = {
     teamOrFocus: "Life sciences cloud applications (UI)",
   },
   contact,
-  about: `Front-end–leaning engineer with 12+ years building **React** and **JavaScript** UIs in SaaS, commerce, and a founder-led product—ES6+ and TypeScript are my daily bread, and I am comfortable fitting team conventions whether screens are typed or not. I care about resilient components, real performance budgets, and working cleanly with design and backend partners so features survive enterprise release cycles.
+  about: `I am applying for Front-End Software Engineer at Veeva because the role matches my production history: **React** and **JavaScript** with ES6+ as the default, enterprise SaaS with disciplined releases, and close work with QA and backend partners.
 
-Testing is not optional: I use Vitest and **React Testing Library** day to day (Jest-equivalent patterns are a quick ramp if your repo is Jest-native); Cypress when end-to-end risk warrants it. I collaborate with QA so coverage matches what breaks in production. Styling work spans Tailwind, Chakra, and component libraries; if Veeva standardizes on SASS or JSS, I adopt the house style.
+I ship maintainable components, pragmatic performance, and tests centered on user behavior—**React Testing Library** with Vitest in recent repos; **Jest** where the team standardizes it. Styling has been Tailwind- and Chakra-heavy; I adopt SASS or JSS per house style. I mentor through reviews, pairing, and standards, not direct reports.
 
-Life sciences domain depth is new to me; my transferable strength is getting complex, regulated-feeling workflows right in the UI—permissions, dense data, and long maintenance horizons—plus mentorship that makes teams faster (informal lead via reviews and pairing, no direct reports). I’m U.S.-based and can work PST/MST hours per your requirement; confirm any office or “Work Anywhere” nuances with recruiting.`,
+Life sciences domain depth is not on my resume yet. What transfers is dense, permissioned workflows and UIs built for long maintenance. I have worked next to JVM services, but Java build tooling is not my daily job—I pitch in where front-end engineers touch Gradle or Jenkins. I am U.S.-based with unrestricted authorization, can work PST or MST hours, and will confirm Work Anywhere details with recruiting.`,
   skills: veevaSkills,
   experience,
   companyReferences,

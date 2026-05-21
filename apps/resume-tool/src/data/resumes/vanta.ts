@@ -14,7 +14,7 @@ const vantaSkills: SkillCategory[] = [
       "React, TypeScript, and Next.js for user-facing SaaS",
       "Node.js, API design, and service boundaries in production",
       "GraphQL in real products (Bloom: shared API across web and other clients; schema collaboration with backend)",
-      "PostgreSQL and Prisma / Neon daily (Plantfolio); MongoDB is a straightforward ramp for document-style workloads",
+      "PostgreSQL and Prisma / Neon daily (Plantfolio); MongoDB production for 1+ year before that migration",
     ],
   },
   {

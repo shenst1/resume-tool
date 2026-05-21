@@ -33,7 +33,7 @@ const higharcSkills: SkillCategory[] = [
       "Performance and reliability-minded shipping on production systems",
     ],
   },
-  baseSkills.find((c) => c.label === "AI/ML") ?? baseSkills[3],
+  baseSkills.find((c) => c.label === "AI-native product & workflow") ?? baseSkills[3],
 ];
 
 export const higharcResume: Resume = {

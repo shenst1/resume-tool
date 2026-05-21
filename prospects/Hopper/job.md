@@ -1,8 +1,8 @@
-# Hopper — Senior Frontend Engineer (HTS Stays & Packages)
+# Hopper — Senior Frontend / Full-Stack Engineer (HTS Stays & Packages)
 
-- **Posting:** Candidate-provided text (HTS — **Commerce**; **Stays & Packages**: hotels, alt stays, packages with flights/cars/lodging). Official listings: [Hopper careers](https://www.hopper.com/careers) *(search “HTS” / “Stays” for live URL)*.
+- **Posting:** Candidate-provided JD (2026) — HTS **Stays & Packages**; lodging & bundled travel. Official listings: [Hopper careers](https://www.hopper.com/careers) *(match to live requisition when applying).*
 - **Org:** **Hopper Technology Solutions (HTS)** — B2B travel commerce / white-label portals for banks, airlines, fintech, etc.; this team owns **lodging & bundled** experiences.
-- **Location:** **100% remote USA** (posting listed Boston / Austin / Miami as remote hubs).
+- **Location / comp:** Confirm remote/hub policy on live req; **comp band cited in posted materials:** **$230K–$330K USD** (verify level and geography).
 - **Employment:** Full time.
 - **Role emphasis:** Senior **frontend** with **full-stack welcome**; multi-tenant / multi-brand portal architecture, booking & checkout flows, search UX, performance & maintainability.
 - **Stack called out (posting):** React (compiler-era patterns, hooks, SSR/hydration), TypeScript, CSS (Tailwind, SCSS, CSS-in-JS), TanStack / React Query, Vite-class tooling, monorepos (Turbo, Nx, pnpm), Next.js for SSR/SSG, testing discipline; **bonus:** API/backend/cloud collaboration (GCP, AWS).

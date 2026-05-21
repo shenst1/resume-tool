@@ -28,10 +28,10 @@ const dagsterSkills: SkillCategory[] = [
       "React",
       "Next.js",
       "Prisma",
-      "Stripe, auth & multi-tenant patterns (Clerk, Supabase RLS)",
+      "Stripe, auth & multi-tenant patterns (Clerk, Postgres/Neon)",
     ],
   },
-  baseSkills.find((c) => c.label === "AI/ML") ?? baseSkills[3],
+  baseSkills.find((c) => c.label === "AI-native product & workflow") ?? baseSkills[3],
 ];
 
 export const dagsterPlatformResume: Resume = {

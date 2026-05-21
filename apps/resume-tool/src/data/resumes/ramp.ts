@@ -23,6 +23,7 @@ const rampSkills: SkillCategory[] = [
 
 export const rampResume: Resume = {
   slug: "ramp",
+  createdAt: "2026-05-18",
   pageTitle:
     "Shenstone, Andrew - Application for Software Engineer, Travel @ Ramp",
   target: {
@@ -31,8 +32,11 @@ export const rampResume: Resume = {
     teamOrFocus: "Juno",
   },
   contact,
-  about:
-    "Senior software engineer with 12+ years building full-stack products; Juno’s mission—better guest travel and expense on a modern stack—maps to what I’ve shipped at Plantfolio: complex workflows, PostgreSQL-backed models, Stripe for real money, and AI to cut manual coordination. I’m fluent in TypeScript, React, and PostgreSQL, comfortable owning ambiguous problems end-to-end, and I’ve delivered integrations and payment flows at Bloom.wine and Tilia alongside product-led work. I act as technical lead informally (pairing, code review). I want to help guests and admins move from fragmented processes to a cohesive experience and to build reliable payments and agent-assisted tooling at scale.",
+  about: `I am applying for Software Engineer, Travel on Juno because the role centers on **TypeScript**, **React**, and **PostgreSQL**, plus payments, travel and booking integrations, and AI-assisted workflows. That is the kind of work I have shipped: multi-step flows, real money, and backends that have to stay correct.
+
+On Plantfolio I owned PostgreSQL models, checkout, and Stripe; at Bloom.wine and Tilia I built integrations and webhook-driven flows alongside admin UIs. I am used to ambiguous scope, pairing, and review-heavy collaboration.
+
+I have not delivered corporate travel booking at Ramp's scale in production. I am clear on that gap. What transfers is commerce and marketplace discipline, deep Stripe and integration mileage, and finance schooling—I get productive fast on your booking stack and policy edge cases without overclaiming domain tenure.`,
   skills: rampSkills,
   experience,
   companyReferences,

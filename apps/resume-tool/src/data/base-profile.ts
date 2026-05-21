@@ -10,10 +10,15 @@ export const contact: Contact = {
   ],
 };
 
-/** Shared opening narrative for resumes that use the default summary. */
-export const about = `Senior software engineer with 12+ years building full-stack products—from high-traffic sites and commerce platforms to a founder-led product—shipping TypeScript, React, React Native, Flutter (Dart), Next.js, Node, PostgreSQL, cloud, and AI-enabled features. Technical lead in practice through pairing, review, and implementation guidance (no direct reports).
+/**
+ * Default summary narrative (used by tailored resumes that import `about`).
+ * The `base` résumé uses `baseResumeAbout` in `resumes/base.ts` for Indeed / general profile.
+ */
+export const about = `Senior product engineer with 12+ years shipping software—full-stack in practice, with a front-end emphasis. My default way of working is AI-native engineering: Cursor (top 1% user) and Claude Code–class agents on every feature, with human ownership of architecture, tests, and production risk.
 
-GraphQL shows up repeatedly in production: at Tilia we introduced an API and consumed it from our product; at Bloom, Rails GraphQL shared across web and mobile; earlier agency adoption too. It isn’t always how I’d sketch a greenfield API, but I’m fluent schema-through-client when that’s the stack.`;
+Plantfolio is both where that shows up in the product—LLM vision, chat, and retrieval customers use—and where I designed the codebase for agent-friendly iteration. I partner with product and design from discovery through production on React and TypeScript, and own APIs and data models when the feature needs it.
+
+GraphQL shows up repeatedly in production (Bloom, Tilia, agency work). I also have years on Ruby on Rails through Rails 6, MongoDB and PostgreSQL in production, and commerce and payments integrations. I lead through pairing, review, and execution planning (no direct reports).`;
 
 /** Standard education line (Finance; relevant for fintech / business context). */
 export const educationFinanceScu = "B.S. Finance, Santa Clara University — 2010";
@@ -40,6 +45,7 @@ export const baseSkills: SkillCategory[] = [
     items: [
       "Node.js",
       "PostgreSQL",
+      "MongoDB (production Plantfolio ~1+ year before Postgres migration)",
       "Prisma",
       "Server Actions",
       "API Design",
@@ -47,13 +53,12 @@ export const baseSkills: SkillCategory[] = [
     ],
   },
   {
-    label: "AI/ML",
+    label: "AI-native product & workflow",
     items: [
-      "OpenAI API",
-      "AI SDK",
-      "Vector Embeddings",
-      "Natural Language Processing",
-      "Retrieval Augmented Generation (RAG)",
+      "AI-native product delivery: vision, conversational UX, RAG/embeddings in production (Plantfolio)",
+      "OpenAI API, AI SDK, vector embeddings",
+      "AI-assisted engineering: Cursor (top 1% user), Claude Code–class workflows—daily practice since the current wave of coding agents, not a recent experiment",
+      "Codebases structured for agent-friendly work: typed TypeScript monorepos, tests, clear package boundaries",
     ],
   },
   {
@@ -92,21 +97,27 @@ export const experience: ExperienceRole[] = [
     end: "Present",
     groups: [
       {
+        heading: "AI-native product & engineering",
+        bullets: [
+          "Built Plantfolio as an AI-native application: plant ID from photos, contextual assistant (Sage), smart tag extraction, and semantic search over 40,000+ species—LLM features customers use in production, not demos",
+          "AI-native way of building: Cursor (top 1% user) and Claude-class agents are my default workflow from early in the product; I own architecture and review while using AI for speed across the 12+ package monorepo",
+          "Designed the monorepo for agent-friendly iteration—TypeScript, clear boundaries, Vitest/Cypress, and consistent patterns so AI-assisted shipping stays maintainable",
+        ],
+      },
+      {
         heading: "Product Leadership & Architecture",
         bullets: [
           "Architected and built a comprehensive plant management platform from the ground up, serving as both technical lead and product owner",
           "Owned the full feature cycle: joined customer calls to identify friction points, architected solutions, implemented, tested, and verified success in production",
-          "Designed and implemented a sophisticated monorepo architecture with 12+ packages, enabling rapid development and maintainable codebases",
           "Led product strategy and user experience decisions, making product micro-decisions and navigating ambiguity to deliver value iteratively",
         ],
       },
       {
         heading: "Technical Achievements",
         bullets: [
-          "AI Integration: Built advanced AI-powered features including plant identification from photos, contextual chatbot (Sage), and smart text extraction from plant tags using OpenAI's vision and language models",
           "Modern Frontend Architecture: Implemented Next.js with React, React Server Components, and TypeScript, achieving exceptional performance and developer experience",
-          "Complex Data Modeling: Designed and implemented sophisticated PostgreSQL schemas with Prisma, handling complex relationships between users, plants, folios, and media with 15+ interconnected models",
-          "Supabase to Neon: Shipped on Supabase (PostgreSQL with Row-Level Security policies for multi-tenant isolation) before migrating the data layer to Neon; strong hands-on experience with RLS and Postgres-centric access control",
+          "Data modeling & migration: Built Plantfolio on MongoDB and shipped production there for 1+ year, then migrated late to PostgreSQL on Neon (15+ interconnected models with Prisma today)—deep familiarity with document and relational modeling tradeoffs",
+          "Database choices: Evaluated Supabase during exploration but did not ship on it; chose Neon for managed Postgres; auth and subscription tiers via Clerk with Postgres-centric access patterns in production today",
           "Content Management: Created sophisticated content management system with rich text editing, plant tagging, and flexible data structures",
         ],
       },
@@ -138,7 +149,7 @@ export const experience: ExperienceRole[] = [
       {
         heading: "Code Quality & Leadership",
         bullets: [
-          "Established coding standards and architectural patterns that enabled rapid, consistent development",
+          "Established coding standards and architectural patterns that enabled rapid, consistent development—with AI-assisted velocity grounded in tests and human review",
           "Implemented comprehensive testing strategy with Vitest and Cypress, maintaining high code quality",
           "Built reusable component library and design system, ensuring consistent UI/UX across the platform",
         ],
@@ -233,7 +244,7 @@ export const companyReferences: CompanyReference[] = [
     name: "Plantfolio",
     years: "2023-Present",
     description:
-      "AI-powered plant management platform with 40,000+ plant database serving both consumer garden management and independent garden center services",
+      "AI-native plant management platform (vision, chat, RAG search); built with AI-assisted engineering (Cursor-first) and 40,000+ species catalog",
     href: "https://plantfolio.garden/",
   },
   {

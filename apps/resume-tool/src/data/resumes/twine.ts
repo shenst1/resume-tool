@@ -27,7 +27,7 @@ const twineSkills: SkillCategory[] = [
       "Production troubleshooting mindset: narrow incidents, guardrails, and measurable improvements",
     ],
   },
-  baseSkills.find((c) => c.label === "AI/ML") ?? baseSkills[3],
+  baseSkills.find((c) => c.label === "AI-native product & workflow") ?? baseSkills[3],
 ];
 
 export const twineResume: Resume = {

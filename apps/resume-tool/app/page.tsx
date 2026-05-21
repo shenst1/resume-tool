@@ -54,6 +54,17 @@ export default function Home() {
               Pros, cons, and when to use it
             </p>
           </Link>
+          <Link
+            href="/agentic-transition"
+            className="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow border border-gray-200 border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50/80"
+          >
+            <h2 className="text-xl font-semibold text-emerald-950">
+              Agentic Transition
+            </h2>
+            <p className="text-gray-600 text-sm mt-1">
+              AI leverage report for Owner.com (Scale Yourself)
+            </p>
+          </Link>
         </div>
         <h2 className="mb-4 text-lg font-semibold text-gray-700">Resumes</h2>
         <ResumeSlugTabs entries={resumeEntries} />

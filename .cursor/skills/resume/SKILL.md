@@ -15,7 +15,8 @@ description: >-
 1. **Chat summary** — Short notes on the company, role fit, and anything uncertain (flag assumptions).
 2. **Resume in the app** — New slug under `apps/resume-tool`, registered in `src/data/resumes/index.ts`, includes **`createdAt`** (see below), `pnpm run build` passes.
 3. **Prospect folder** — `prospects/<FolderName>/` with at least `job.md` and `swot.md`; `resumes/` present for the user’s PDF later.
-4. **No PDF generation** — User prints from the browser (Cmd/Ctrl+P → Save as PDF) after review.
+4. **3rd-tier outreach draft** — Generic LinkedIn/email copy for a **loose** connection (not a referral). Set `outreachEmail` on the resume (see below); save the same text to `prospects/<FolderName>/outreach-email.md`. The app shows it in a **screen-only** box at the top of `/jobs/<slug>` with **Copy to clipboard**; it is **hidden when printing** (`.no-print` / `print:hidden`).
+5. **No PDF generation** — User prints from the browser (Cmd/Ctrl+P → Save as PDF) after review.
 
 ## Research
 
@@ -35,11 +36,20 @@ description: >-
    - `pageTitle` (e.g. `Shenstone, Andrew - Application for <Role> @ <Company>`),
    - `target: { company, role, teamOrFocus? }`,
    - `contact` from `@/data/base-profile`,
-   - **`about`** — **Scannable SUMMARY** recruiters can skim in ~15 seconds: aim for **~80–140 words** in **2–3 short paragraphs**, separated by a **blank line** in the string so the renderer prints distinct blocks; **lead with role fit**, then proof, then honest gaps/ramp—defer proof points to EXPERIENCE. Write in **plain, human language** (what you shipped, what you have not used yet, why transfer still applies)—**no insider mash-ups** or unexplained shorthand (e.g. say “I have not used Contentful in production; I have done the same structured-content work with DatoCMS,” not invented phrases like “logo ramp”).
+   - **`about`** — **Scannable SUMMARY** a hiring manager can skim in ~15 seconds: aim for **~80–140 words** in **2–3 short paragraphs**, separated by a **blank line** in the string so the renderer prints distinct blocks; **lead with role fit**, then proof, then honest gaps/ramp—leave granular proof in **EXPERIENCE**. Write in **plain, human language** (what you shipped, what you have not used yet, why transfer still applies)—**no insider mash-ups** or unexplained shorthand (e.g. say “I have not used Contentful in production; I have done the same structured-content work with DatoCMS,” not invented phrases like “logo ramp”).
+
+     **Summary bold (`**…**`) — optional; skills-only:**
+     - **Default:** Treat **`about` with zero bold** as normal. Plain paragraphs scan well; do not add bold for “interest value.”
+     - **When the JD is stack-abstract** (scale, culture, responsibilities, no named tools/languages/frameworks), keep the **entire `about` unbolded**—e.g. Identity-style posts that rarely list Next.js, Spark, etc.
+     - **Bold only sparingly, and only for concrete overlap:** a **specific skill, tool, or platform** the posting **names explicitly** (e.g. **Next.js**, **Terraform**, **FHIR**) that also appears truthfully in your background. At most **a few** such terms in the whole summary; never a wall of bold.
+     - **Do not bold** team names, company pillars, scale phrases (“billions of events”), domain nouns (“identity resolution”), or generic responsibilities—even if the JD repeats them. Those belong in plain prose; detail lives in **EXPERIENCE** / **skills**.
+     - **Honest gap / ramp** paragraphs: always **unbolded**.
+     - **Sanity check:** If the reader is not comparing a checklist of named technologies, you probably need **no** bold.
    - **`skills`** — Start from `baseSkills`; add/reorder categories or items to mirror the posting (e.g. payments, CMS, AI). Keep honest: don’t invent skills.
    - **`experience`** — Import from `base-profile` unless a role-specific tweak is needed;
    - **`companyReferences`** — From `base-profile` unless a one-line tweak helps.
    - **`education`** — Use `educationFinanceScu` from `@/data/base-profile` when fintech/business relevance is useful (optional otherwise).
+   - **`outreachEmail`** *(required on new tailored resumes)* — `{ label?, subject, body }` for a **3rd-tier** contact at the company: honest loose-LinkedIn tone, no fabricated referral, `[First name]` placeholder, sign-off from `base-profile` `contact`. Follow tone rules in `.cursor/skills/outreach-email/SKILL.md` (no em dashes per repo `.cursor/rules.md`). Body should be short and paste-ready.
 2. **Register** in `src/data/resumes/index.ts` (import + add to `resumes` object).
 3. **Run** `pnpm run build` from `apps/resume-tool` and fix failures before finishing.
 
@@ -102,14 +112,18 @@ Template:
 
 - Ensure `prospects/<FolderName>/resumes/` exists (add `.gitkeep` if the repo uses empty dirs for this).
 
+### `outreach-email.md`
+
+- Mirror `outreachEmail` from the resume file: subject + body for a **3rd-tier** LinkedIn or email (loose connection, not recruiting spam).
+
 ## Order of operations
 
 1. Parse posting + clarify company name and slug.
 2. Research (web + posting).
-3. Draft tailored `about` + skills; implement new resume file (**include `createdAt: "YYYY-MM-DD"`**) + `index.ts`.
-4. Create `prospects/.../job.md` + `swot.md` + `resumes/`.
+3. Draft tailored `about` + skills; implement new resume file (**include `createdAt: "YYYY-MM-DD"`** and **`outreachEmail`**) + `index.ts`.
+4. Create `prospects/.../job.md` + `swot.md` + `outreach-email.md` + `resumes/`.
 5. Run `pnpm run build` in `apps/resume-tool`.
-6. Reply in chat with **brief** company/role notes and **where to preview** (`/jobs/<slug>`); remind user to export PDF when satisfied.
+6. Reply in chat with **brief** company/role notes and **where to preview** (`/jobs/<slug>`); mention the **outreach box** (copy button, hidden on print); remind user to export PDF when satisfied.
 
 ## Anti-patterns
 
@@ -117,4 +131,5 @@ Template:
 - **Skipping `createdAt`** on **new** tailored resumes — always set it when adding an application today so the index tabs stay accurate.
 - **Duplicate** `base` resume in the home page list — new slugs appear in the Resumes section (Library / Recently added tabs); do not special-case unless the user asks.
 - Creating **marketing fluff** or unverifiable SWOT claims; prefer “unknown / verify in interview.”
+- **Over-bolding the `about` summary** — Bolding team names, domain phrases, scale, or responsibilities; or bolding when the JD never names concrete tools. Reserve bold for **0–a few** explicitly listed **skills/platforms** you have (see **Summary bold**), or use **none**.
 - **Opaque jargon in `about` or skill lines** — If a phrase needs a second read, rewrite it. Prefer full sentences over hiring slang or brand shorthand unless the term is standard (e.g. “SEO,” “CMS”).

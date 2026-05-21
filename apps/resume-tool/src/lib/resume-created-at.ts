@@ -1,4 +1,4 @@
-/** Entries with `createdAt` in the last this many full days appear only on the “Recently added” tab. */
+/** Entries with `createdAt` within this many days (from created date) appear on the “Recently added” tab. */
 export const RECENT_RESUME_DAYS = 5;
 
 function parseCreatedAtDay(createdAt: string): Date | null {

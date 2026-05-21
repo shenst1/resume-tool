@@ -67,5 +67,15 @@ export type Resume = {
   companyReferences: CompanyReference[];
   /** Optional education section */
   education?: string;
+  /**
+   * Optional 3rd-tier outreach draft (LinkedIn or email). Shown in a screen-only box with copy;
+   * omitted from print/PDF via `.no-print` / `print:hidden`.
+   */
+  outreachEmail?: {
+    /** e.g. "3rd-tier LinkedIn (loose connection)" */
+    label?: string;
+    subject: string;
+    body: string;
+  };
 };
 

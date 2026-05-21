@@ -27,7 +27,7 @@ const afreshSkills: SkillCategory[] = [
       "Shipping with an observability mindset as systems scale",
     ],
   },
-  baseSkills.find((c) => c.label === "AI/ML") ?? baseSkills[3],
+  baseSkills.find((c) => c.label === "AI-native product & workflow") ?? baseSkills[3],
 ];
 
 export const afreshProductionPlanningResume: Resume = {

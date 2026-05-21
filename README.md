@@ -55,6 +55,11 @@ Navigate to `/jobs/[slug]` to view a specific resume. For example:
      skills: baseSkills, // or customize
      experience, // or customize
      companyReferences,
+     outreachEmail: {
+       label: "3rd-tier LinkedIn or email (loose connection)",
+       subject: "...",
+       body: "Hi [First name],\\n\\n...",
+     }, // optional; shown in screen-only box with copy, hidden when printing
    };
    ```
 4. Export it from `src/data/resumes/index.ts`:

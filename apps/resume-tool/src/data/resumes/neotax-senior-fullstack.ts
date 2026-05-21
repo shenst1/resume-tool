@@ -33,7 +33,7 @@ const neotaxSkills: SkillCategory[] = [
       "Early-stage ownership: founder-led product (Plantfolio) plus venture-backed teams (Bloom, Tilia)",
     ],
   },
-  baseSkills.find((c) => c.label === "AI/ML") ?? baseSkills[3],
+  baseSkills.find((c) => c.label === "AI-native product & workflow") ?? baseSkills[3],
 ];
 
 export const neotaxSeniorFullstackResume: Resume = {
