@@ -1,27 +1,32 @@
-# SWOT — Teleport (Senior Full Stack Engineer, product)
+# SWOT — Teleport (Senior Full Stack Engineer, Product)
 
 ## Strengths
 
-- Clear market story: identity as the control plane for infra and for agentic workloads, not just human SSO.
-- Open-source core can mean high leverage on craft, review culture, and public design discipline.
-- Interview process emphasizes real work (take-home) over trivia, which fits engineers who ship.
+- **TypeScript/React** and product lifecycle ownership (customers → design → ship → docs) match posting closely.
+- Security- and identity-adjacent application work (auth tiers, RLS, KYC tooling) transfers to “trusted computing” UX without pretending PAM domain expertise.
+- Take-home process favors engineers who ship real Go+TS projects over trivia; plays to thoughtful implementation and written design.
+- AI infrastructure identity narrative aligns with where access patterns are heading (agents, ephemeral privilege).
 
 ## Weaknesses
 
-- **Go** is a hard requirement on paper; candidates without production **Go** may face extra scrutiny despite strong **TypeScript** and security thinking.
-- Security/infra domain depth expected from peers may be a steep learning curve if you come from application SaaS only.
+- **Go experience** is a stated requirement; production depth is TypeScript/Node today.
+- Infra identity, SSH/K8s access planes, and compliance buyer vocabulary are new domain.
+- Open-source Go codebase at Teleport scale may ramp slower than application SaaS-only background.
 
 ## Opportunities
 
-- AI-driven access and non-deterministic agents are a durable problem space; product engineers who can explain and operationalize “who can do what, for how long” stay relevant for years.
-- Desktop (Connect) and operator UX are areas where small product wins visibly reduce friction for power users.
+- Product surface (Connect, onboarding, passwordless) is where strong frontend+API engineers multiply adoption.
+- Remote-first, small-team culture with RFD discipline suits senior ICs who document decisions.
+- Category tailwind as AI workloads force identity redesign.
 
 ## Threats
 
-- Competitive category (PAM, zero-trust, secrets, identity) with large incumbents and noisy marketing.
-- Fast-moving requirements as agent patterns evolve; roadmap churn is a real industry pattern.
+- Candidates with production **Go** plus security/infra backgrounds may outrank on paper screen.
+- Crowded zero-trust/PAM market with well-funded incumbents.
+- Take-home time investment with no guarantee if Go bar is strict pre-offer.
 
 ## Notes
 
-- Confirm compensation band on the exact Lever requisition for your location.
-- If the recruiter screens heavily on **Go**, be ready to show take-home quality and a concrete study plan; **Rust** may appear on some teams—ask about split.
+- Treat take-home as the real interview; read [fullstack challenge levels](https://github.com/gravitational/careers/blob/main/challenges/fullstack/challenge.md) and aim for level that matches senior scope.
+- Confirm comp band and level on intro call.
+- Ask Go vs Rust split on product team and how much work is Connect/desktop vs web UI.

@@ -11,33 +11,33 @@ const teleportSeniorFullstackSkills: SkillCategory[] = [
   {
     label: "Product full stack (TypeScript & React)",
     items: [
-      "Production TypeScript and React across Next.js, admin consoles, and long-session workflows (Bloom, Plantfolio, Tilia tools)",
-      "Thoughtful data fetching, pagination, and filtering patterns in dense operator UIs; maps to making Teleport faster and clearer at scale",
-      "Testing with Vitest and Cypress; documentation that matches what ships",
+      "Production TypeScript and React across Next.js, admin consoles, and long-session operator workflows (Bloom, Plantfolio, Tilia)",
+      "Server-side pagination, filtering, and URL-driven navigation patterns in dense UIs; maps to Teleport performance and discoverability work",
+      "Onboarding and guided setup UX from founder delivery; documentation and tests that match what ships (Vitest, Cypress)",
     ],
   },
   {
-    label: "Web security & trust boundaries",
+    label: "Web security & identity-minded design",
     items: [
-      "Identity- and trust-adjacent work: KYC and risk tooling at Tilia; authentication and tiered authorization with Clerk on Plantfolio",
-      "PostgreSQL Row-Level Security and tenant isolation in production; conscious about least privilege at the data layer even if the product is not a PAM tool",
-      "Mindset aligned with zero-trust themes: short-lived access, explicit permissions, and avoiding \"just use a shared secret\" shortcuts",
+      "Trust-adjacent delivery: KYC and risk tooling at Tilia; Clerk auth, tiered access, and Postgres Row-Level Security on Plantfolio",
+      "Least-privilege and short-lived access habits; passwordless and cryptographic identity are domain ramps, not claims of PAM production tenure",
+      "Conscious about web security fundamentals: auth boundaries, sensitive data handling, and avoiding shared-secret shortcuts",
     ],
   },
   {
-    label: "APIs, backends & open-source style delivery",
+    label: "Lifecycle, RFDs & open-source culture",
     items: [
-      "Node services and API design; GraphQL schema-through-client work (Bloom, Tilia)",
-      "Comfort with technical writing, design discussion, and iteration with stakeholders (founder chapter on Plantfolio)",
-      "Open source culture is a draw: public clarity, reviewable design, and RFD-style rigor map to how I already decide and document tradeoffs",
+      "Full product lifecycle: customer friction through design, implementation, rollout, and production debugging (Plantfolio founder)",
+      "Technical writing and design discussion before code; comfortable with Markdown RFC/RFD-style rigor and reviewable tradeoffs",
+      "Open source as public craft: aligns with Teleport’s RFD process and community-facing code expectations",
     ],
   },
   {
-    label: "Go & systems languages (honest ramp)",
+    label: "Go & backend (honest ramp)",
     items: [
-      "Go is not a language I have shipped professionally yet; your take-home and codebase are exactly how I want to convert systems programming hours into real fluency",
-      "Production depth today is TypeScript and Node on the server; I read and learn new languages quickly and care about correctness under review",
-      "Rust is also not in my production history; if the team mixes Rust at the edges, I will ramp alongside your guidance",
+      "Go is not shipped professionally on my résumé yet; Teleport’s take-home (Go + TypeScript) is how I intend to demonstrate backend fluency",
+      "Node services, GraphQL, and API design in production today; read and learn systems languages quickly under code review",
+      "Rust is not production history; ramp alongside team guidance if it appears at the edges",
     ],
   },
   baseSkills.find((c) => c.label === "Cloud & Tools") ?? baseSkills[4],
@@ -46,21 +46,39 @@ const teleportSeniorFullstackSkills: SkillCategory[] = [
 export const teleportSeniorFullstackResume: Resume = {
   slug: "teleport-senior-fullstack",
   createdAt: "2026-05-15",
-  pageTitle: "Shenstone, Andrew - Application for Senior Full Stack Engineer @ Teleport",
+  pageTitle:
+    "Shenstone, Andrew - Application for Senior Full Stack Engineer @ Teleport",
   homeListLabel: "Teleport",
   target: {
     company: "Teleport",
-    role: "Senior Full Stack Engineer",
-    teamOrFocus: "Product — Teleport core UI, APIs, and identity-forward user journeys",
+    role: "Senior Full Stack Engineer (Product)",
+    teamOrFocus:
+      "Teleport core UI & APIs (Connect, onboarding, passwordless); remote-first; Go + TypeScript take-home",
   },
   contact,
-  about: `Product-minded full-stack engineer with twelve years shipping **TypeScript** and **React** surfaces operators and customers actually use, from commerce admin at scale to a founder-led platform with strict auth and data boundaries. I care about security as an outcome of clear identity, access, and least-privilege design, not as a bolt-on.
+  about: `Product-focused full-stack engineer with twelve years shipping **TypeScript** and **React** surfaces operators rely on, plus backend APIs and data boundaries that keep access trustworthy. Teleport’s mission (infrastructure identity for humans, machines, workloads, and AI agents) is the right problem as agentic systems stretch who and what needs access.
 
-Teleport's bet, unified infrastructure identity for humans, machines, and agents, is the right problem for how AI workloads stretch access patterns past what traditional PAM and network borders were built for. I want to build the product layer that makes that model approachable: Connect, onboarding, passwordless journeys, and fast, trustworthy control planes in the UI.
+I want the full lifecycle you describe: learn from customers, write design docs before big bets, implement in the open, test, and document. Recent work maps to your roadmap themes: guided onboarding, pagination and filtering at scale, and auth-minded UX (Clerk, RLS, KYC-adjacent tooling at Tilia). I care about web security as product design, not a checkbox.
 
-I am upfront about one gap: I have not shipped production **Go** or Rust yet, while your stack centers on Go for most backend work. My plan is to lean hard into your take-home and code review rhythm to get to productive contributions quickly; my near-term leverage is strong on the TypeScript and React side, security-aware design, and end-to-end ownership through docs and tests.`,
+I am direct about the gap: I have not shipped production **Go** or Rust yet, while most Teleport backend code is Go. My near-term leverage is strong on the TypeScript/React side, security-aware product thinking, and RFD-style rigor; I plan to prove Go through your take-home and review rhythm, not by overstating tenure I do not have.`,
   skills: teleportSeniorFullstackSkills,
   experience,
   companyReferences,
   education: educationFinanceScu,
+  outreachEmail: {
+    label:
+      "3rd-tier LinkedIn or email (loose connection; personalize [First name])",
+    subject: "Product full stack engineering at Teleport / Andrew Shenstone",
+    body: `Hi [First name],
+
+I hope this is okay to send as a loose LinkedIn connection. I applied for Senior Full Stack Engineer (product) at Teleport and am interested in infrastructure identity and the Connect/onboarding/passwordless product surface. I am not assuming you are hiring or on product engineering; any perspective would help.
+
+I am a product-minded full-stack engineer with production TypeScript and React, security- and auth-aware delivery, and end-to-end ownership through docs and tests. Go is a ramp I am preparing for via your take-home, not production history I would overstate.
+
+Happy to share my resume if useful. Thank you for reading a note from a distant connection.
+
+Andrew Shenstone
+shenst1@gmail.com
+339-223-0797`,
+  },
 };

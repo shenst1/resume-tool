@@ -42,20 +42,20 @@ const ownerSkills: SkillCategory[] = [
 
 export const ownerFullstackResume: Resume = {
   slug: "owner-fullstack",
-  createdAt: "2026-05-20",
-  pageTitle: "Shenstone, Andrew - Application for Software Engineer, Full-Stack @ Owner",
+  createdAt: "2026-05-29",
+  pageTitle: "Shenstone, Andrew - Application for Staff Engineer @ Owner",
   homeListLabel: "Owner",
   target: {
     company: "Owner",
-    role: "Software Engineer, Full-Stack",
+    role: "Staff Engineer",
     teamOrFocus: "Remote (US / Canada)",
   },
   contact,
-  about: `I am applying for Software Engineer, Full-Stack at Owner because the role matches how I work: **TypeScript** across **React**, **Next.js**, and **Node**, 0→1 product ownership, and software that helps independent operators win online—not generic enterprise tools.
+  about: `I am applying for Staff Engineer at Owner because the role is full-stack product work for independent restaurants and local businesses—the same kind of operator problems I have shipped for as a founder and at Bloom.
 
-On Plantfolio I founded and shipped an **AI-native** product end to end—LLM vision, chat, and **RAG** search customers use—and I build with **AI-native engineering** as my default: **Cursor** (top 1% user), Claude-class agents, and a typed monorepo structured for agent-friendly iteration. Stack includes **MongoDB** (1+ year production), late migration to Postgres on **Neon** (evaluated Supabase, did not ship it), **Stripe**, and operator-facing UX. That maps to Owner’s agentic mission: local businesses, ordering paths, and high ownership. At Bloom I built commerce systems for independent wineries on **Shopify Plus**—same operator-economics shape as restaurants fighting platform fees.
+I have twelve years building with TypeScript, React, Next.js, and Node.js, including MongoDB in production. I founded Plantfolio end to end: talking to customers, designing features, writing tested code, and shipping to production, with AI built into the product itself. At Bloom I built admin and commerce systems for independent wineries on Shopify Plus.
 
-I have 12+ years in software engineering (well past your 3+ bar) and thrive in product-focused startups: proactive communication, roadmap collaboration, and shipping across the system. **Vue** is not my daily framework; **React/Next** is. I am motivated by Owner’s agentic direction—software that does the work for owners.`,
+I work closely with product and design, own projects from conception through launch, and mentor teammates through code review and pairing. Owner's vision—one system that does the work for owners—is the product direction I want to help build.`,
   skills: ownerSkills,
   experience,
   companyReferences,

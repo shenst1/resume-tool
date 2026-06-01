@@ -38,7 +38,7 @@ const nourishSkills: SkillCategory[] = [
 
 export const nourishSeniorFullstackResume: Resume = {
   slug: "nourish-senior-fullstack",
-  createdAt: "2026-05-20",
+  createdAt: "2026-05-29",
   pageTitle:
     "Shenstone, Andrew - Application for Senior Full Stack Engineer @ Nourish",
   homeListLabel: "Nourish",
@@ -48,11 +48,11 @@ export const nourishSeniorFullstackResume: Resume = {
     teamOrFocus: "Growth, Consumer, or Services pod (remote or NYC hybrid)",
   },
   contact,
-  about: `Senior full-stack engineer with 12+ years shipping user-facing product end to end on **React**, **TypeScript**, **Node.js**, **PostgreSQL**, and **Prisma**, plus production **React Native**. I want pod ownership at Nourish: own major codebase areas, ship fast with tested code, and partner across product, design, and analytics in an experimentation-minded culture.
+  about: `Senior full-stack engineer with 12+ years shipping user-facing product end to end on **React**, **TypeScript**, **Node.js**, **PostgreSQL**, and **Prisma**, plus production **React Native**. I want pod ownership at Nourish: take major codebase areas from idea through deployment, set ambitious timelines, and partner across product, design, and analytics in a data-driven experimentation culture.
 
-Plantfolio is my 0→1 proof (customer calls through production, AI-native features, insurance-adjacent trust habits from regulated commerce at Bloom and payments/KYC depth at Tilia). I mentor through pairing and review, help teams interview as they scale, and work from first principles on scope and trade-offs.
+Plantfolio is my 0→1 proof (customer calls through production, AI-native features customers use daily, insurance-adjacent trust habits from regulated commerce at Bloom and payments/KYC depth at Tilia). I ship fast without skipping tests, mentor through pairing and review, help teams interview as they scale, and work from first principles on scope and trade-offs.
 
-Healthcare nutrition is new domain vocabulary for me; I transfer compliance-minded, multi-stakeholder product patterns from regulated retail and payments. Formal Amplitude platform ownership is a ramp from data-informed founder habits, not a headline on my résumé today. B.S. Finance (Santa Clara), not computer science; my production engineering track record is the proof.`,
+Healthcare nutrition is new domain vocabulary for me; I transfer compliance-minded, multi-stakeholder product patterns from regulated retail and payments. Formal Amplitude platform ownership is a ramp from data-informed founder habits, not headline tenure today. B.S. Finance (Santa Clara), not computer science; my production engineering track record is the proof.`,
   skills: nourishSkills,
   experience,
   companyReferences,

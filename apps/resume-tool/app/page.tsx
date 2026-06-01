@@ -55,6 +55,15 @@ export default function Home() {
             </p>
           </Link>
           <Link
+            href="/star"
+            className="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow border border-gray-200 border-violet-200 bg-violet-50/50"
+          >
+            <h2 className="text-xl font-semibold">STAR Story Bank</h2>
+            <p className="text-gray-600 text-sm mt-1">
+              Behavioral stories — mentorship, scoping, standards (say out loud)
+            </p>
+          </Link>
+          <Link
             href="/agentic-transition"
             className="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow border border-gray-200 border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50/80"
           >

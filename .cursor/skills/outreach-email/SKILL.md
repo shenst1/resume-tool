@@ -1,64 +1,97 @@
 ---
 name: outreach-email
 description: >-
-  Drafts concise recruiter or hiring-contact outreach when the user has a warm
-  path (referral, prior interview in household, shared email) or at least the
-  recipient’s email. Use when the user asks for an intro email, cold outreach to
-  someone named at a company, or application email copy alongside a tailored resume.
+  Drafts outreach for job applications: default is a short, human note to a
+  technical recruiter after applying in the portal (résumé attached). Also covers
+  warm referral or hiring-manager email when the user has a real connection. Use
+  when the user asks for recruiter email copy alongside a tailored resume or
+  post-apply follow-up.
 ---
 
-# Warm outreach email (known contact or email)
+# Outreach email
 
-## When to use
+## Default: technical recruiter (post-apply)
 
-Apply when the user is emailing **someone specific** at a target company (recruiter, HM, employee) and wants copy they can paste into Gmail or LinkedIn. If there is **only** a job board apply flow with no person, use a shorter “cover note” variant without pretending there is a referral.
+Use this for **`outreachEmail` on tailored resumes** in the resume workflow and for `prospects/<Folder>/outreach-email.md`.
 
-## Outcomes
+**When:** User has already applied on the company job portal and is emailing or LinkedIn-messaging a **technical recruiter** to stand out as a human (not a referral, not a loose connection).
 
-1. **Draft email** in chat: subject line options, body, signature placeholders only where data is missing.
-2. **Honest framing** of fit and gaps (especially must-haves they may not meet); turn deal-breakers into a **respectful screen question** when appropriate.
-3. **Optional artifact**: If `prospects/<Company>/` exists or the user is using this repo’s job workflow, offer to save the final draft as `prospects/<Folder>/recruiter-email.md` (overwrite only when asked).
+**Assumptions:**
 
-## Style and constraints
+- Same tailored résumé PDF is **attached** to the email (already in the ATS from the portal).
+- No invented relationship (“we met at…”, “referred by…”).
+- Recipient may not be the right contact; one soft line is enough (“if you’re the right person to talk to”).
 
-- **Tone**: Direct, warm, professional; short paragraphs; no hype.
-- **Typography**: Follow **`/.cursor/rules.md`** for email-specific preferences (e.g. avoiding em dashes). Use commas, parentheses, colons, or new sentences instead unless the rules say otherwise.
-- **Facts**: Do not invent how the user got the address, titles, or relationship. Use only what the user (or `base-profile` / tailored resume) supplies.
-- **ASCII**: Prefer plain hyphen or “and” in subjects if the user wants maximal compatibility across clients.
+**Tone:** Short, direct, lightly informal. A touch of humor is OK (e.g. “not a robot”) if it stays respectful. Goal is human signal, not a second cover letter or stack dump.
 
-## Information to confirm or infer
+**Typography:** Follow **`/.cursor/rules.md`** (e.g. avoid em dashes).
 
-Ask only if blocking; otherwise draft with `[brackets]` for missing items.
+### Template (adapt role and company per posting)
 
-| Piece | Notes |
-|-------|--------|
-| Recipient name | Correct spelling for greeting |
-| Company | Legal vs consumer brand if relevant |
-| Role title | Match careers posting |
-| Path to contact | Referral name + relationship, or “found email via…” |
-| Attachments | e.g. tailored résumé PDF |
-| Screen question | One clear yes/no or “non-starter?” question on gaps |
+**Label (in resume app):** `Technical recruiter (after applying; personalize [First name])`
 
-## Structure (template)
+**Subject:**
 
-**Subject** (pick one pattern; avoid em dashes per **`/.cursor/rules.md`**):
+- `[Role title] application / Andrew Shenstone`
+- `Applied for [Role title] at [Company] / Andrew Shenstone`
+
+**Body:**
+
+```text
+Hey [First name],
+
+I recently applied for [Role title] at [Company] through your job portal. Same resume attached here.
+
+I'm writing to let you know ⛔️🤖 I'm not a robot and I'm genuinely interested in whether I'm the right fit. I applied because I think my background fits the role, and I'd love to get a conversation started if you're the right person to talk to.
+
+Andrew
+```
+
+**Optional (use sparingly):** One sentence of honest fit only if it stays conversational (e.g. “Rails and React are where I’ve shipped most.”). Do not mirror the job description in bullets.
+
+**Sign-off:** First name only (`Andrew`) unless the user requests full signature and contact block.
+
+### Anti-patterns (recruiter post-apply)
+
+- Long fit paragraphs or résumé bullets in the email body.
+- “Happy to share my resume” when they already applied and attached it.
+- Loose-connection framing (“hope this is okay as a LinkedIn connection”).
+- Fabricated referrals or overstated warmth.
+- Multiple em dashes or corporate hype.
+
+---
+
+## Alternate: warm path (referral or known contact)
+
+Use when the user has a **real** connection: referral, prior interview in household, met at event, or direct email from someone they know.
+
+**Tone:** Direct, warm, professional; short paragraphs; no hype.
+
+**Structure:**
+
+1. Greeting + how they got this email (specific, truthful).
+2. Interest: role + company, one line.
+3. Fit: 2–4 sentences on strongest overlaps; honest gaps if relevant.
+4. Ask: résumé attached and/or short call; thanks.
+
+**Subject patterns:**
 
 - `Andrew Shenstone / [Role title] ([context])`
 - `[Role title] application - Andrew Shenstone`
 
-**Body**:
+**Sign-off:** Use `contact` from `apps/resume-tool/src/data/base-profile.ts` when full signature is appropriate.
 
-1. **Greeting** + one sentence on **how they got this email** (specific person or context).
-2. **Interest**: role + company, one tight line.
-3. **Fit**: 2–4 sentences: strongest overlaps with posting (stack, domain, scale). Mention transferable stacks when true (e.g. Ruby → Python) without overstating.
-4. **Gaps** *(if any)*: plain admission + either readiness to ramp or one **direct question** about whether the gap is disqualifying.
-5. **Ask**: résumé attached and/or short call; thanks.
+**Optional artifact:** Save as `prospects/<Folder>/recruiter-email.md` when distinct from the default `outreach-email.md` (only when user asks).
 
-**Sign-off**: Use `contact` from `apps/resume-tool/src/data/base-profile.ts` when this repo is in context.
+---
 
-## Anti-patterns
+## Information to confirm or infer
 
-- Fabricated referrals or overstating connection depth.
-- Long bullet mirrors of the job description.
-- Multiple em dashes or fancy punctuation when **`/.cursor/rules.md`** disallows them.
-- Passive endings with no clear next step.
+Ask only if blocking; otherwise use `[brackets]`.
+
+| Piece | Notes |
+|-------|--------|
+| Recipient name | `[First name]` in template |
+| Company | Match careers posting |
+| Role title | Exact title from posting |
+| Attachment | Same PDF as portal application |

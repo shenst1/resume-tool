@@ -22,4 +22,6 @@
 ## Tailored resume
 
 - **Local preview:** `http://localhost:3000/jobs/dutchie-staff-frontend`
+- **Interview prep:** [`interview-prep.md`](interview-prep.md) (first round — Cyril Van Dyke; includes **STAR stories** section)
+- **STAR bank (all interviews):** `http://localhost:3000/star`
 - **PDF:** Print → Save as PDF into `prospects/Dutchie/resumes/`.

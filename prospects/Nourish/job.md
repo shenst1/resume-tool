@@ -2,7 +2,7 @@
 
 - **Posting:** [Senior Full Stack Engineer](https://job-boards.greenhouse.io/usenourish/jobs/5011452008)
 - **Product / company:** **Nourish** — virtual nutrition counseling connecting patients with **registered dietitians**; **AI-native**, patient-friendly healthcare centered on nutrition; national **health insurance** and provider partnerships; live in **all 50 states** ([usenourish.com](https://www.usenourish.com/))
-- **Role:** **Senior Full Stack Engineer** — pod-based (**Growth**, **Consumer**, or **Services**); own major codebase areas; fast shipping with tested, high-performance code; cross-functional with product, design, engineering, and analytics; experimentation culture; help grow engineering via interviewing (nice-to-have)
+- **Role:** **Senior Full Stack Engineer** — pod-based (**Growth**, **Consumer**, or **Services**); own major codebase areas; set ambitious timelines; fast shipping with tested, high-performance code; improve engineering processes/tools; cross-functional with product, design, engineering, and analytics; experimentation culture; interviewing help (nice-to-have)
 - **Location / remote:** **Remote** or **NYC hybrid** (Union Square office)
 - **Stack / keywords from post:** **React**, **TypeScript**, **Node.js**, **React Native**, **Prisma**, **PostgreSQL**, **Amplitude** (per user/JD aggregation); AI-native platform
 - **Comp:** See company [Compensation & Benefits](https://www.notion.so/Compensation-Benefits-38e34a54930f45cf93f41fd7f7e28a83?pvs=21) (Notion link from posting)
@@ -21,4 +21,6 @@
 ## Tailored resume
 
 - **Local preview:** `http://localhost:3000/jobs/nourish-senior-fullstack`
+- **Outreach:** copy box at top of job page (hidden on print); `outreach-email.md`
 - **PDF:** Print → Save as PDF into `prospects/Nourish/resumes/`.
+- **Greenhouse application questions:** interest in Nourish; hardest project; beyond-average performance; visa sponsorship; LinkedIn/GitHub optional.

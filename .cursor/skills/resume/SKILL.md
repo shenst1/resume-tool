@@ -15,7 +15,7 @@ description: >-
 1. **Chat summary** — Short notes on the company, role fit, and anything uncertain (flag assumptions).
 2. **Resume in the app** — New slug under `apps/resume-tool`, registered in `src/data/resumes/index.ts`, includes **`createdAt`** (see below), `pnpm run build` passes.
 3. **Prospect folder** — `prospects/<FolderName>/` with at least `job.md` and `swot.md`; `resumes/` present for the user’s PDF later.
-4. **3rd-tier outreach draft** — Generic LinkedIn/email copy for a **loose** connection (not a referral). Set `outreachEmail` on the resume (see below); save the same text to `prospects/<FolderName>/outreach-email.md`. The app shows it in a **screen-only** box at the top of `/jobs/<slug>` with **Copy to clipboard**; it is **hidden when printing** (`.no-print` / `print:hidden`).
+4. **Recruiter outreach draft** — Short, human email for a **technical recruiter** after the user has applied in the company’s job portal (not a loose connection or fabricated referral). Set `outreachEmail` on the resume (see below); save the same text to `prospects/<FolderName>/outreach-email.md`. The app shows it in a **screen-only** box at the top of `/jobs/<slug>` with **Copy to clipboard**; it is **hidden when printing** (`.no-print` / `print:hidden`).
 5. **No PDF generation** — User prints from the browser (Cmd/Ctrl+P → Save as PDF) after review.
 
 ## Research
@@ -49,7 +49,7 @@ description: >-
    - **`experience`** — Import from `base-profile` unless a role-specific tweak is needed;
    - **`companyReferences`** — From `base-profile` unless a one-line tweak helps.
    - **`education`** — Use `educationFinanceScu` from `@/data/base-profile` when fintech/business relevance is useful (optional otherwise).
-   - **`outreachEmail`** *(required on new tailored resumes)* — `{ label?, subject, body }` for a **3rd-tier** contact at the company: honest loose-LinkedIn tone, no fabricated referral, `[First name]` placeholder, sign-off from `base-profile` `contact`. Follow tone rules in `.cursor/skills/outreach-email/SKILL.md` (no em dashes per repo `.cursor/rules.md`). Body should be short and paste-ready.
+   - **`outreachEmail`** *(required on new tailored resumes)* — `{ label?, subject, body }` for a **technical recruiter** at the company after portal apply: short, human, slightly informal (see template in `.cursor/skills/outreach-email/SKILL.md`). Assume the user **attaches the same résumé PDF** they submitted in the portal; do not ask the recruiter to “share if useful.” Use `[First name]` placeholder; sign off as **Andrew** (first name only) unless the user asks otherwise. No fabricated referral. Follow repo `.cursor/rules.md` (no em dashes). Body should be paste-ready in 4–6 sentences.
 2. **Register** in `src/data/resumes/index.ts` (import + add to `resumes` object).
 3. **Run** `pnpm run build` from `apps/resume-tool` and fix failures before finishing.
 
@@ -114,7 +114,7 @@ Template:
 
 ### `outreach-email.md`
 
-- Mirror `outreachEmail` from the resume file: subject + body for a **3rd-tier** LinkedIn or email (loose connection, not recruiting spam).
+- Mirror `outreachEmail` from the resume file: subject + body for a **technical recruiter** (post-apply, résumé attached).
 
 ## Order of operations
 
@@ -123,7 +123,7 @@ Template:
 3. Draft tailored `about` + skills; implement new resume file (**include `createdAt: "YYYY-MM-DD"`** and **`outreachEmail`**) + `index.ts`.
 4. Create `prospects/.../job.md` + `swot.md` + `outreach-email.md` + `resumes/`.
 5. Run `pnpm run build` in `apps/resume-tool`.
-6. Reply in chat with **brief** company/role notes and **where to preview** (`/jobs/<slug>`); mention the **outreach box** (copy button, hidden on print); remind user to export PDF when satisfied.
+6. Reply in chat with **brief** company/role notes and **where to preview** (`/jobs/<slug>`); mention the **recruiter outreach box** (copy button, hidden on print; attach same PDF as portal); remind user to export PDF when satisfied.
 
 ## Anti-patterns
 
