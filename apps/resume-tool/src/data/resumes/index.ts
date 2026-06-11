@@ -12,11 +12,13 @@ import { bluehostResume } from "./bluehost";
 import { builderResume } from "./builder";
 import { bugcrowdSeniorFullstackResume } from "./bugcrowd-senior-fullstack";
 import { closeFrontendResume } from "./close-frontend";
+import { cohereHealthSrSoftwareEngineerResume } from "./cohere-health-sr-software-engineer";
 import { compaSoftwareEngineerResume } from "./compa-software-engineer";
 import { conveyorSeniorFullstackResume } from "./conveyor-senior-fullstack";
 import { ouraSeniorFullstackCommerceResume } from "./oura-senior-fullstack-commerce";
 import { ownerFullstackResume } from "./owner-fullstack";
 import { orbisProductFrontendResume } from "./orbis-product-frontend";
+import { orderCoSeniorSoftwareEngineerResume } from "./order-co-senior-software-engineer";
 import { orumSeniorFullstackResume } from "./orum-senior-fullstack";
 import { curologyResume } from "./curology";
 import { customerIoResume } from "./customer-io";
@@ -35,6 +37,7 @@ import { givecampusSeniorEngineerResume } from "./givecampus-senior-engineer";
 import { groundfloorResume } from "./groundfloor";
 import { headwayStaffPayerResume } from "./headway-staff-payer";
 import { higharcResume } from "./higharc";
+import { himsHersSrCustomerRetentionResume } from "./hims-hers-sr-customer-retention";
 import { honorSeniorBackendResume } from "./honor-senior-backend";
 import { hopperHtsResume } from "./hopper-hts";
 import { homeboundSeniorStaffResume } from "./homebound-senior-staff";
@@ -63,7 +66,9 @@ import { rocketMoneyCoreSeniorFullstackResume } from "./rocket-money-core-senior
 import { rugietSeniorSoftwareEngineerResume } from "./rugiet-senior-software-engineer";
 import { sailpointLeadFullstackResume } from "./sailpoint-lead-fullstack";
 import { solaceFullstackResume } from "./solace-fullstack";
+import { scribdSeIiFrontendResume } from "./scribd-se-ii-frontend";
 import { scribdSeniorWebApiResume } from "./scribd-senior-web-api";
+import { snapsheetSeniorSoftwareEngineerResume } from "./snapsheet-senior-software-engineer";
 import { subwayResume } from "./subway";
 import { teleportSeniorFullstackResume } from "./teleport-senior-fullstack";
 import { teamOneManagerExperienceEngineeringResume } from "./team-one-manager-experience-engineering";
@@ -71,6 +76,8 @@ import { tennaResume } from "./tenna";
 import { thriveMarketSeniorWebResume } from "./thrive-market-senior-web";
 import { topstepSeniorFullstackResume } from "./topstep-senior-fullstack";
 import { toastDigitalStorefrontResume } from "./toast-digital-storefront";
+import { topdogLawSeniorSoftwareEngineerResume } from "./topdog-law-senior-software-engineer";
+import { talkiatrySeniorFullstackNewPatientResume } from "./talkiatry-senior-fullstack-new-patient";
 import { tripleseatPrincipalUiResume } from "./tripleseat-principal-ui";
 import { twineResume } from "./twine";
 import { vannevarResume } from "./vannevar";
@@ -93,11 +100,13 @@ export const resumes: Record<string, Resume> = {
   builder: builderResume,
   "bugcrowd-senior-fullstack": bugcrowdSeniorFullstackResume,
   "close-frontend": closeFrontendResume,
+  "cohere-health-sr-software-engineer": cohereHealthSrSoftwareEngineerResume,
   "compa-software-engineer": compaSoftwareEngineerResume,
   "conveyor-senior-fullstack": conveyorSeniorFullstackResume,
   "oura-senior-fullstack-commerce": ouraSeniorFullstackCommerceResume,
   "owner-fullstack": ownerFullstackResume,
   "orbis-product-frontend": orbisProductFrontendResume,
+  "order-co-senior-software-engineer": orderCoSeniorSoftwareEngineerResume,
   "orum-senior-fullstack": orumSeniorFullstackResume,
   curology: curologyResume,
   "customer-io": customerIoResume,
@@ -116,6 +125,7 @@ export const resumes: Record<string, Resume> = {
   groundfloor: groundfloorResume,
   "headway-staff-payer": headwayStaffPayerResume,
   higharc: higharcResume,
+  "hims-hers-sr-customer-retention": himsHersSrCustomerRetentionResume,
   "honor-senior-backend": honorSeniorBackendResume,
   "hopper-hts": hopperHtsResume,
   "homebound-senior-staff": homeboundSeniorStaffResume,
@@ -144,7 +154,9 @@ export const resumes: Record<string, Resume> = {
   "rugiet-senior-software-engineer": rugietSeniorSoftwareEngineerResume,
   "sailpoint-lead-fullstack": sailpointLeadFullstackResume,
   "solace-fullstack": solaceFullstackResume,
+  "scribd-se-ii-frontend": scribdSeIiFrontendResume,
   "scribd-senior-web-api": scribdSeniorWebApiResume,
+  "snapsheet-senior-software-engineer": snapsheetSeniorSoftwareEngineerResume,
   subway: subwayResume,
   "teleport-senior-fullstack": teleportSeniorFullstackResume,
   "team-one-manager-experience-engineering":
@@ -153,6 +165,8 @@ export const resumes: Record<string, Resume> = {
   "thrive-market-senior-web": thriveMarketSeniorWebResume,
   "topstep-senior-fullstack": topstepSeniorFullstackResume,
   "toast-digital-storefront": toastDigitalStorefrontResume,
+  "topdog-law-senior-software-engineer": topdogLawSeniorSoftwareEngineerResume,
+  "talkiatry-senior-fullstack-new-patient": talkiatrySeniorFullstackNewPatientResume,
   "tripleseat-principal-ui": tripleseatPrincipalUiResume,
   twine: twineResume,
   vannevar: vannevarResume,

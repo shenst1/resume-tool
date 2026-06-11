@@ -1,10 +1,11 @@
-# SWOT — Rentana (Software Engineer)
+# SWOT — Rentana (Full-Stack Software Engineer)
 
 ## Strengths
 
 - **Problem-market fit (opinion):** Revenue and pricing for multifamily is a clear operational pain; operators often run spreadsheets or legacy tools (inference; validate in conversation).
-- **Capital and narrative:** Public seed raise and founder-heavy story reduce immediate “will they exist” doubt versus anonymous stealth (**fact from company blog**).
+- **Capital and narrative:** Public seed raise, founder-heavy story, and reported recent growth reduce immediate “will they exist” doubt versus anonymous stealth (**fact from company blog; growth claim from public LinkedIn**).
 - **Role shape:** Greenfield systems and pipeline work suit someone who likes ownership and fewer layers (**fact from posting**).
+- **Security posture:** SOC II Type 2 compliance is a concrete signal for customer data handling (**fact from company blog, Feb 2025**).
 
 ## Weaknesses
 
@@ -23,5 +24,6 @@
 
 ## Notes
 
-- Capture the **exact careers URL** when you apply for audit trail.
+- Posting URL captured: [full-stack-software-engineer](https://www.rentana.io/job/full-stack-software-engineer).
 - Ask how **GraphQL** and **SQL** split across services, and where **pricing models** live (batch vs online, human-in-the-loop vs automated).
+- Jay Bisaga’s public hiring post (**2026**) emphasizes **React & TypeScript** and **fully remote**; confirm team size and on-call expectations in the first call.

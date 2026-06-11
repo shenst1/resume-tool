@@ -1,5 +1,7 @@
 # Dutchie — First round interview prep
 
+**Status:** Rejected after EM screen with Cyril — see **[interview-debrief-cyril.md](./interview-debrief-cyril.md)** for what worked and what to improve. Keep this file for story beats if you re-enter the process or interview similar roles.
+
 **Role:** Staff Software Engineer, Front-End (Ecommerce Platform)  
 **Interviewer:** [Cyril Van Dyke](https://www.linkedin.com/in/cyril-van-dyke-35880160/)  
 **Tailored resume:** `http://localhost:3000/jobs/dutchie-staff-frontend`
@@ -236,5 +238,8 @@ Avoid leading with comp in round 1 unless he brings it up. Staff band on posting
 - `job.md` — posting summary and fit notes
 - `swot.md` — strengths, weaknesses, interview notes
 - `interview-prep.md` — this file (Cyril / Dutchie specific)
+- **`interview-debrief-cyril.md`** — post-interview analysis (outcome, Staff framing, closing)
+- **[INTERVIEW-GUIDANCE.md](../../INTERVIEW-GUIDANCE.md)** — repo-wide interview priorities
+- **[interview-reminders.md](../interview-reminders.md)** — cross-company habits
 - **STAR story bank (all interviews):** `http://localhost:3000/star`
 - `resumes/` — export PDF from resume viewer when ready

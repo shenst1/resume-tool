@@ -26,6 +26,14 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) to see the resume index page.
 
+## Interview guidance
+
+Living docs for prep and debriefs (not part of the resume app):
+
+- **[INTERVIEW-GUIDANCE.md](./INTERVIEW-GUIDANCE.md)** — top priorities and index
+- **[prospects/interview-reminders.md](./prospects/interview-reminders.md)** — cross-company habits (guardrails-first AI, Staff framing, closing block)
+- **`prospects/<Company>/interview-debrief-*.md`** — company-specific post-interview notes (e.g. [Dutchie](./prospects/Dutchie/interview-debrief-cyril.md))
+
 ## Viewing Resumes
 
 Navigate to `/jobs/[slug]` to view a specific resume. For example:

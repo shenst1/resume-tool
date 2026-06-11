@@ -9,13 +9,21 @@ import type { Resume, SkillCategory } from "@/types/resume";
 
 const rentanaSkills: SkillCategory[] = [
   {
-    label: "Data & backend",
+    label: "Full stack (posting)",
     items: [
+      "TypeScript and React in production (Next.js, SPAs, React Native history)",
       "PostgreSQL (complex schemas, performance-minded queries)",
+      "GraphQL APIs in production (Rails GraphQL at Bloom)",
+      "Unit, integration, and E2E testing (Vitest, Cypress); CI/CD discipline",
+    ],
+  },
+  {
+    label: "Data & pipelines",
+    items: [
       "ETL-style pipelines and third-party integrations",
-      "API design; GraphQL in production (Rails GraphQL at Bloom)",
-      "Async workflows (Inngest, webhooks, background jobs)",
       "Normalizing messy operational data at Bloom and Tune",
+      "Async workflows (Inngest, webhooks, background jobs)",
+      "Metrics-minded shipping: reporting-heavy commerce features (Bloom)",
     ],
   },
   {
@@ -23,16 +31,7 @@ const rentanaSkills: SkillCategory[] = [
     items: [
       "Production AI features: vision, assistants, RAG-style retrieval (Plantfolio)",
       "OpenAI API and AI SDK; embeddings and search (Algolia + vectors)",
-      "Metrics-minded shipping: reporting-heavy wine commerce features (Bloom)",
-    ],
-  },
-  {
-    label: "Full-stack & quality",
-    items: [
-      "TypeScript (static typing end-to-end)",
-      "React, Next.js, React Native",
-      "Vitest, Cypress; CI/CD discipline",
-      "Collaboration with design on UX for operators (Bloom, Tilia)",
+      "Data security and integrity habits from regulated commerce workflows",
     ],
   },
   baseSkills.find((c) => c.label === "Cloud & Tools") ?? baseSkills[4],
@@ -40,17 +39,34 @@ const rentanaSkills: SkillCategory[] = [
 
 export const rentanaResume: Resume = {
   slug: "rentana",
-  pageTitle: "Shenstone, Andrew - Application for Software Engineer @ Rentana",
+  createdAt: "2026-06-10",
+  pageTitle:
+    "Shenstone, Andrew - Application for Full-Stack Software Engineer @ Rentana",
   target: {
     company: "Rentana",
-    role: "Software Engineer",
-    teamOrFocus: "Data pipelines, greenfield systems, AI-powered revenue platform",
+    role: "Full-Stack Software Engineer",
+    teamOrFocus:
+      "Greenfield data systems, pipelines, AI-powered revenue platform; remote (USA)",
   },
   contact,
-  about:
-    "Senior software engineer with 12+ years building full-stack products where trusted data, integrations, and clear UX decide outcomes. On Plantfolio I lived greenfield scope end to end: PostgreSQL with sophisticated modeling, background workflows, production AI features (vision, contextual assistants, retrieval-style workflows), and search over a large structured catalog. At Bloom I shipped GraphQL APIs consumed across apps and deep Shopify-adjacent commerce integrations with reporting surfaces operators relied on daily; at Tune I built ETL-style pipelines for marketplace automation. I partner tightly with product leadership out of habit (founder role today; senior IC before). I am motivated by Rentana's mix of normalized third-party data, analytical features, and ML-backed pricing intelligence. Multifamily operations are not my background yet; I pick up domain context quickly when problems are concrete. Hands-on training of ML models has been lighter than shipping LLM and retrieval features in production, something I would discuss plainly with your team.",
+  about: `Senior full-stack engineer with 12+ years building products where trusted data, integrations, and clear operator UX decide outcomes. On Plantfolio I owned greenfield scope end to end: **PostgreSQL**, background workflows, production AI features, and search over a large structured catalog. At Bloom I shipped **GraphQL** APIs and commerce integrations with reporting surfaces operators relied on daily; at Tune I built ETL-style pipelines for marketplace automation.
+
+Rentana's mix of normalized third-party data, analytical features, and ML-backed pricing intelligence is the kind of problem I want. I partner tightly with product leadership out of habit (founder today; senior IC before) and I have shipped **TypeScript** and **React** stacks with unit, integration, and E2E test discipline across front and back.
+
+Multifamily operations are not my background yet; I pick up domain context quickly when problems are concrete. Hands-on training of classical ML models has been lighter than shipping LLM and retrieval features in production; I would discuss that plainly with your team.`,
   skills: rentanaSkills,
   experience,
   companyReferences,
   education: educationFinanceScu,
+  outreachEmail: {
+    label: "Technical recruiter (after applying; personalize [First name])",
+    subject: "Full-Stack Software Engineer application / Andrew Shenstone",
+    body: `Hey [First name],
+
+I recently applied for Full-Stack Software Engineer at Rentana through your job portal. Same resume attached here.
+
+I'm writing to let you know ⛔️🤖 I'm not a robot and I'm genuinely interested in whether I'm the right fit. Data pipelines and React/TypeScript full-stack work are where I have shipped most, and I'd love to get a conversation started if you're the right person to talk to.
+
+Andrew`,
+  },
 };

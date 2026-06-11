@@ -27,6 +27,7 @@
 
 ## Notes
 
+- **EM screen (Cyril):** Rejected — debrief and improvement themes in [interview-debrief-cyril.md](./interview-debrief-cyril.md) and root [INTERVIEW-GUIDANCE.md](../../INTERVIEW-GUIDANCE.md).
 - **Senior vs Staff:** Résumé is tuned for **Staff** apply; if recruiter suggests Senior, same materials work with title swap—do not over-optimize two versions unless asked.
 - Confirm **remote** policy and **level** within the salary band ($162K–$220K Staff).
 - Ask how **Apollo** + **Styled Components** standards are enforced vs greenfield choices.

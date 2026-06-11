@@ -34,11 +34,28 @@ Rehearse until the guardrail list rolls off naturally; then speed is a one-liner
 - For anything in the demo (polling, auth, jobs, uploads): prep **one level deeper** — tradeoffs, failure modes, what you’d change at 10× scale or longer waits. **Naming one pattern** (e.g. exponential backoff) beats debating whether the problem is “solved.”
 - **Truth + ownership:** “I didn’t hand-write every line; I own the behavior and validated it” is fine if followed by **what you’d verify or change** under pressure.
 
+## Staff-level interviews (not just Senior)
+
+- **Definition alone is not enough.** After “what Staff means,” give **30s proof** from Bloom/Tilia (mentorship, platform bet, standards, POC) — then **20s** “at {company} I’d focus on…”
+- **Do not lead with Plantfolio solo learning** as your only Staff prep story; founder mode proves velocity, not multiplying others.
+- **Plantfolio for Staff (honest):** customer discovery, product empathy, reframing one-off client asks → generalized scope. You did **not** multiply engineers at scale there — use Bloom/Tilia for that proof ([Dutchie debrief](./Dutchie/interview-debrief-cyril.md#better-plantfolio-angle-staff--honest-about-scale)).
+- **Pushback story:** IC reframed a big-customer ask → outcome for many customers. If the example is “we compromised,” reframe or pick another story (see Dutchie debrief).
+
 ## Closing block (last ~15 minutes)
 
+- **Rule of three:** at most **three** questions prepared; go deep on one if invited — don’t stack many topics in overtime.
+- **30s close:** why this company, why this level, why now — after your last question, not only “any concerns?”
+- **Links after the call:** email architecture/portfolio URLs; in-meeting chat paste often **nofollow** or gets lost.
+- If time is up: “One more question — I can email the rest.”
 - **One question** tied to something they said — shows you were listening.
 - **Optional short closer:** invite unresolved concerns without a long speech — e.g. what would make them confident you’d succeed in *their* environment.
 - Prefer **specific and conversational** over generic “I want to be a yes for you” unless you’ve earned that tone in the room.
+
+## Speech and pacing
+
+- **Pause** instead of “um / you know / I guess.”
+- **One idea per breath**; stop when the beat is done.
+- When energy is low: **shorter answers**, more rehearsed beats — record 5-minute Staff / pushback / proudest-project answers and listen once for fillers.
 
 ## Screening format & boundaries
 
@@ -53,4 +70,6 @@ Rehearse until the guardrail list rolls off naturally; then speed is a one-liner
 
 ---
 
-*Last updated: 2026-03-31 — Builder.io debrief (screening boundaries + prep)*
+*Last updated: 2026-06-01 — Dutchie Cyril debrief (Staff framing, closing block, speech)*
+
+**Debriefs:** [Dutchie — Cyril](./Dutchie/interview-debrief-cyril.md) · **Root index:** [INTERVIEW-GUIDANCE.md](../INTERVIEW-GUIDANCE.md)
