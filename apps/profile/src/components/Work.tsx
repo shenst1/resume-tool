@@ -1,18 +1,29 @@
 import Image from "next/image";
-import type { Project } from "@/data/profile";
+import type { ComponentType } from "react";
+import { FintechPaymentsVisual } from "@/components/visuals/FintechPaymentsVisual";
+import type { Project, ProjectVisual } from "@/data/profile";
 import { profile } from "@/data/profile";
 import { ProfileImage } from "./ProfileImage";
 
+const projectVisuals: Record<ProjectVisual, ComponentType> = {
+  "fintech-payments": FintechPaymentsVisual,
+};
+
 function ProjectCard({ project }: { project: Project }) {
+  const Visual = project.visual ? projectVisuals[project.visual] : null;
+
   const content = (
     <>
       <div className="relative mb-6">
-        {project.image ? (
+        {Visual ? (
+          <Visual />
+        ) : project.image ? (
           <ProfileImage
             alt={project.image.alt}
             aspect="video"
             fit={project.image.fit}
             src={project.image.src}
+            unoptimized
           />
         ) : (
           <div className="aspect-video rounded-2xl bg-[linear-gradient(135deg,var(--accent-soft),var(--surface-raised))] ring-1 ring-border/60" />
@@ -24,6 +35,7 @@ function ProjectCard({ project }: { project: Project }) {
               className="h-10 w-auto"
               height={40}
               src={project.logo.src}
+              unoptimized
               width={120}
             />
           </div>

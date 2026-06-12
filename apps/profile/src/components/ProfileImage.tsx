@@ -8,6 +8,10 @@ type ProfileImageProps = {
   imageClassName?: string;
   fit?: "cover" | "contain";
   priority?: boolean;
+  /** Pass `true` for UI screenshots — skips recompression and serves the original file. */
+  unoptimized?: boolean;
+  quality?: number;
+  sizes?: string;
 };
 
 const aspectClasses = {
@@ -21,6 +25,13 @@ const fitClasses = {
   contain: "object-contain",
 };
 
+/** Match rendered width so Next doesn't downscale below what the layout displays (incl. ~2x DPR). */
+const defaultSizes: Record<NonNullable<ProfileImageProps["aspect"]>, string> = {
+  square: "(max-width: 1024px) calc(100vw - 3rem), 280px",
+  portrait: "(max-width: 1024px) calc(100vw - 3rem), 400px",
+  video: "(max-width: 1024px) calc(100vw - 3rem), 560px",
+};
+
 export function ProfileImage({
   src,
   alt,
@@ -29,6 +40,9 @@ export function ProfileImage({
   imageClassName = "",
   fit = "cover",
   priority = false,
+  unoptimized = false,
+  quality = 95,
+  sizes,
 }: ProfileImageProps) {
   return (
     <div
@@ -39,8 +53,10 @@ export function ProfileImage({
         className={`${fitClasses[fit]} ${imageClassName}`}
         fill
         priority={priority}
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 340px"
+        quality={unoptimized ? undefined : quality}
+        sizes={sizes ?? defaultSizes[aspect]}
         src={src}
+        unoptimized={unoptimized}
       />
     </div>
   );
