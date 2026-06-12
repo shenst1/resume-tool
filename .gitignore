@@ -39,3 +39,25 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# --- Personal / local-only (keep copies on disk; not pushed to public repo) ---
+
+# Job search pipeline: notes, SWOTs, outreach, exported PDFs
+/prospects/
+
+# Interview prep
+INTERVIEW-GUIDANCE.md
+
+# Cursor skill with personal ATS defaults (copy SKILL.example.md → SKILL.md locally)
+.cursor/skills/fill-resume/SKILL.md
+
+# Resume tool — profile data & tailored resumes
+apps/resume-tool/src/data/base-profile.ts
+apps/resume-tool/src/data/star-stories.ts
+apps/resume-tool/src/data/agentic-transition-report.ts
+apps/resume-tool/src/data/resumes/*
+!apps/resume-tool/src/data/resumes/*.example.ts
+
+# Profile site — personal contact & headshot
+apps/profile/src/data/profile.ts
+apps/profile/public/images/headshot.jpeg

@@ -26,13 +26,19 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) to see the resume index page.
 
-## Interview guidance
+## Private / local-only data
 
-Living docs for prep and debriefs (not part of the resume app):
+Personal content is **gitignored** and not pushed to the public repo. After cloning, copy the example files and add your own data:
 
-- **[INTERVIEW-GUIDANCE.md](./INTERVIEW-GUIDANCE.md)** — top priorities and index
-- **[prospects/interview-reminders.md](./prospects/interview-reminders.md)** — cross-company habits (guardrails-first AI, Staff framing, closing block)
-- **`prospects/<Company>/interview-debrief-*.md`** — company-specific post-interview notes (e.g. [Dutchie](./prospects/Dutchie/interview-debrief-cyril.md))
+| App | Example → local copy |
+|-----|----------------------|
+| Resume tool | `apps/resume-tool/src/data/base-profile.example.ts` → `base-profile.ts` |
+| Resume tool | `apps/resume-tool/src/data/resumes/base.example.ts` → `base.ts` |
+| Resume tool | `apps/resume-tool/src/data/resumes/index.example.ts` → `index.ts` |
+| Profile site | `apps/profile/src/data/profile.example.ts` → `profile.ts` |
+| Fill-resume skill | `.cursor/skills/fill-resume/SKILL.example.md` → `SKILL.md` |
+
+Also local-only (create on your machine): `prospects/`, `INTERVIEW-GUIDANCE.md`, tailored resume files under `apps/resume-tool/src/data/resumes/`, and `apps/profile/public/images/headshot.jpeg`.
 
 ## Viewing Resumes
 
@@ -42,7 +48,7 @@ Navigate to `/jobs/[slug]` to view a specific resume. For example:
 
 ## Adding a New Resume
 
-1. Create a new file in `src/data/resumes/[job-name].ts`
+1. Create a new file in `apps/resume-tool/src/data/resumes/[job-name].ts` (local only — not committed)
 2. Import the base profile data and types:
    ```typescript
    import { about, baseSkills, companyReferences, contact, experience } from "@/data/base-profile";
