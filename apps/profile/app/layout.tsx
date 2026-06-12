@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site-url";
 import type { Metadata } from "next";
 import { DM_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
@@ -14,19 +15,32 @@ const fraunces = Fraunces({
   weight: ["400", "500", "600", "700"],
 });
 
+const title = "Andrew Shenstone — Senior Product Engineer";
+const description =
+  "Senior product engineer building AI-native products. Founder of Plantfolio. Full-stack with a front-end emphasis. Based in Bend, Oregon.";
+const shareDescription =
+  "I ship products people actually use—from discovery through production.";
+
 export const metadata: Metadata = {
-  title: "Andrew Shenstone — Senior Product Engineer",
-  description:
-    "Senior product engineer building AI-native products. Founder of Plantfolio. Full-stack with a front-end emphasis. Based in Bend, Oregon.",
+  metadataBase: SITE_URL,
+  title,
+  description,
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     shortcut: "/favicon.svg",
   },
   openGraph: {
-    title: "Andrew Shenstone — Senior Product Engineer",
-    description:
-      "I ship products people actually use—from discovery through production.",
+    title,
+    description: shareDescription,
+    url: "/",
+    siteName: "Andrew Shenstone",
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description: shareDescription,
   },
 };
 
