@@ -95,6 +95,21 @@ Navigate to `/jobs/[slug]` to view a specific resume. For example:
 
 ## Printing/Saving as PDF
 
+### Automated export (preferred)
+
+1. Start the dev server: `cd apps/resume-tool && pnpm dev` (default `http://localhost:3000`)
+2. First time only: `cd apps/resume-tool && pnpm exec playwright install chromium`
+3. Export:
+
+```bash
+cd apps/resume-tool
+pnpm export-pdf --slug <slug> --prospect <FolderName>
+```
+
+Writes `prospects/<FolderName>/resumes/Shenstone, Andrew - <Role> @ <Company>.pdf` (from page metadata title; illegal filename characters stripped). Optional: `--base-url http://localhost:3001` or `RESUME_BASE_URL` if the dev server uses another port.
+
+### Manual fallback
+
 1. Open a resume page (e.g., `/jobs/builder`)
 2. Press `Cmd+P` (Mac) or `Ctrl+P` (Windows/Linux)
 3. Select "Save as PDF"

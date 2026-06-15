@@ -52,7 +52,7 @@ export default async function JobResumePage({ params }: PageProps) {
   }
   
   return (
-    <div className="min-h-screen bg-white print:bg-white">
+    <div className="resume-print min-h-screen bg-white print:bg-white">
       <ResumeTemplate data={resume} />
     </div>
   );

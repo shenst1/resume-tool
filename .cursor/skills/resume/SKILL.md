@@ -14,9 +14,9 @@ description: >-
 
 1. **Chat summary** — Short notes on the company, role fit, and anything uncertain (flag assumptions).
 2. **Resume in the app** — New slug under `apps/resume-tool`, registered in `src/data/resumes/index.ts`, includes **`createdAt`** (see below), `pnpm run build` passes.
-3. **Prospect folder** — `prospects/<FolderName>/` with at least `job.md` and `swot.md`; `resumes/` present for the user’s PDF later.
+3. **Prospect folder** — `prospects/<FolderName>/` with at least `job.md` and `swot.md`; `resumes/` present for the exported PDF.
 4. **Recruiter outreach draft** — Short, human email for a **technical recruiter** after the user has applied in the company’s job portal (not a loose connection or fabricated referral). Set `outreachEmail` on the resume (see below); save the same text to `prospects/<FolderName>/outreach-email.md`. The app shows it in a **screen-only** box at the top of `/jobs/<slug>` with **Copy to clipboard**; it is **hidden when printing** (`.no-print` / `print:hidden`).
-5. **No PDF generation** — User prints from the browser (Cmd/Ctrl+P → Save as PDF) after review.
+5. **PDF export** — After `pnpm run build`, run `pnpm export-pdf --slug <slug> --prospect <FolderName>` from `apps/resume-tool` (requires **`pnpm dev` on `http://localhost:3000`**). Writes `prospects/<FolderName>/resumes/Shenstone, Andrew - <Role> @ <Company>.pdf` (same pattern as browser tab title: `Last, First - role @ company` from `target` + `contact`). If export fails with a connection error, tell the user to start the dev server and retry. Manual browser print remains a fallback.
 
 ## Research
 
@@ -80,7 +80,7 @@ Template:
 ## Tailored resume
 
 - **Local preview:** `http://localhost:3000/jobs/<slug>`
-- **PDF:** User saves via Print → Save as PDF into `prospects/<FolderName>/resumes/`.
+- **PDF:** `prospects/<FolderName>/resumes/Shenstone, Andrew - <Role> @ <Company>.pdf` (auto-export via `pnpm export-pdf`; manual Print → Save as PDF is fallback)
 ```
 
 ### `prospects/<FolderName>/swot.md`
@@ -123,7 +123,8 @@ Template:
 3. Draft tailored `about` + skills; implement new resume file (**include `createdAt: "YYYY-MM-DD"`** and **`outreachEmail`**) + `index.ts`.
 4. Create `prospects/.../job.md` + `swot.md` + `outreach-email.md` + `resumes/`.
 5. Run `pnpm run build` in `apps/resume-tool`.
-6. Reply in chat with **brief** company/role notes and **where to preview** (`/jobs/<slug>`); mention the **recruiter outreach box** (copy button, hidden on print; attach same PDF as portal); remind user to export PDF when satisfied.
+6. Run `pnpm export-pdf --slug <slug> --prospect <FolderName>` in `apps/resume-tool` (dev server must be on `http://localhost:3000`).
+7. Reply in chat with **brief** company/role notes, **preview URL** (`/jobs/<slug>`), **PDF path** on disk, and the **recruiter outreach box** (copy button, hidden on print; attach same PDF as portal).
 
 ## Anti-patterns
 
