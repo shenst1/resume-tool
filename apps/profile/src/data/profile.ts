@@ -61,7 +61,7 @@ export const profile = {
   about: {
     paragraphs: [
       "I'm a senior product engineer who defaults to full-stack ownership with a front-end emphasis. React, TypeScript, and Next.js are what I ship today; Ruby on Rails, GraphQL, PostgreSQL, and MongoDB show up repeatedly across my career.",
-      "As founder and lead engineer at Plantfolio, I built an AI-native plant management platform—LLM vision, conversational UX, semantic search over 40,000+ species, and a production MCP server on the live stack—on a monorepo structured for agent-friendly iteration. Cursor (top 1% user) and Claude-class agents are part of my daily workflow; I still own architecture, tests, and what reaches production.",
+      "As founder and lead engineer at Plantfolio, I built an AI-native plant management platform—LLM vision, conversational UX, semantic search over 40,000+ species, and a production MCP server on the live stack—on a monorepo structured for agent-friendly iteration. Cursor (top 1% user) and Claude-class agents are part of my daily workflow; I still own architecture, tests, and what reaches production. I also build agentic ops workflows for outside clients—connecting the tools operators already use so work moves without copy-paste.",
       "Before Plantfolio, I shipped at Tilia (payments and identity tooling), Bloom.wine (commerce for wineries on Shopify Plus), and Ply Interactive (agency work including React Native apps at major event scale). I lead through pairing, review, and clear execution—no direct reports, but real technical influence.",
     ],
     education: "B.S. Finance, Santa Clara University — 2010",
@@ -85,6 +85,14 @@ export const profile = {
         src: "/images/plantfolio.png",
         alt: "Plantfolio plant management dashboard",
       },
+    },
+    {
+      name: "JC Baldwin",
+      tagline: "Agentic ops · Independent",
+      description:
+        "Designed and shipped a multi-agent workflow for a specialty construction firm: Dropbox package intake, document parsing, structured estimate artifacts, and Notion sync—so operators advance work instead of copy-pasting between tools. Human-owned source-of-truth systems (rates, commercial policy); agents handle the pipeline.",
+      years: "2026 — Present",
+      tags: ["Agent workflows", "Cursor", "Notion", "Document AI", "TypeScript"],
     },
     {
       name: "Bloom.wine",
@@ -128,6 +136,18 @@ export const profile = {
     },
   ] satisfies Project[],
   experience: [
+    {
+      title: "Independent Engineer",
+      company: "Agentic workflows for operators",
+      period: "2026 — Present",
+      summary:
+        "Help small businesses turn multi-step operations into reliable agent pipelines that connect the tools they already use.",
+      highlights: [
+        "JC Baldwin: end-to-end estimate ops agents (intake → parse → package → price → Notion sync)",
+        "Skills-as-spec pattern so each agent has a clear contract, handoff, and write scope",
+        "Kept client systems of record human-owned; agents automate movement, not judgment",
+      ],
+    },
     {
       title: "Founder & Lead Engineer",
       company: "Plantfolio",
@@ -225,6 +245,7 @@ export const profile = {
         "RAG & embeddings",
         "MCP server in production (Plantfolio)",
         "Cursor & agent workflows",
+        "Ops automation pipelines",
         "Agent-friendly monorepos",
         "OpenAI API & AI SDK",
       ],
