@@ -58,9 +58,9 @@ export default function Home() {
             href="/star"
             className="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow border border-gray-200 border-violet-200 bg-violet-50/50"
           >
-            <h2 className="text-xl font-semibold">STAR Story Bank</h2>
+            <h2 className="text-xl font-semibold">Interview Prep</h2>
             <p className="text-gray-600 text-sm mt-1">
-              Behavioral stories — mentorship, scoping, standards (say out loud)
+              TMAY opener, STAR stories, production bugs, Plantfolio framing
             </p>
           </Link>
           <Link
