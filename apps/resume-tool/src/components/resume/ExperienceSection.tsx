@@ -1,4 +1,5 @@
 import type { ExperienceRole } from "@/types/resume";
+import { renderInlineBold } from "./renderInlineBold";
 
 interface ExperienceSectionProps {
   experiences: ExperienceRole[];
@@ -21,11 +22,15 @@ export function ExperienceSection({ experiences }: ExperienceSectionProps) {
           {exp.groups.map((group, groupIdx) => (
             <div key={groupIdx} className="mb-5 last:mb-0">
               {group.heading && (
-                <h4 className="text-lg font-semibold mb-2.5 text-gray-700 leading-tight">{group.heading}</h4>
+                <h4 className="text-lg font-semibold mb-2.5 text-gray-700 leading-tight">
+                  {renderInlineBold(group.heading)}
+                </h4>
               )}
               <ul className="list-disc list-inside space-y-1.5 ml-4 leading-relaxed">
                 {group.bullets.map((bullet, bulletIdx) => (
-                  <li key={bulletIdx} className="text-gray-700">{bullet}</li>
+                  <li key={bulletIdx} className="text-gray-700">
+                    {renderInlineBold(bullet)}
+                  </li>
                 ))}
               </ul>
             </div>
