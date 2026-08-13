@@ -24,8 +24,9 @@ export default function AppliedCompaniesPage() {
           Applied companies
         </h1>
         <p className="mb-8 text-sm text-gray-600">
-          {data.count} employers with a tailored resume. Careers and LinkedIn
-          open in a new tab.
+          {data.count} employers with a tailored resume. The first ten have
+          job-board and potential-role links; marketing careers pages often hide
+          listings. Empty scrape is not “no jobs.”
         </p>
         <AppliedCompaniesTable companies={data.companies} />
       </div>

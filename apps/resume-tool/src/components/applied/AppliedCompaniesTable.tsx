@@ -27,7 +27,11 @@ export function AppliedCompaniesTable({
     const q = query.trim().toLowerCase();
     if (!q) return companies;
     return companies.filter((c) => {
-      const hay = `${c.name} ${c.notes ?? ""}`.toLowerCase();
+      const urls = (c.potentialUrls ?? [])
+        .map((u) => `${u.label} ${u.url}`)
+        .join(" ");
+      const hay =
+        `${c.name} ${c.notes ?? ""} ${c.rolesCheckNote ?? ""} ${urls}`.toLowerCase();
       return hay.includes(q);
     });
   }, [companies, query]);
@@ -41,7 +45,7 @@ export function AppliedCompaniesTable({
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search company or notes"
+            placeholder="Search company, notes, or roles"
             className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm outline-none placeholder:text-gray-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-100"
           />
         </label>
@@ -58,6 +62,8 @@ export function AppliedCompaniesTable({
             <tr>
               <th className="whitespace-nowrap px-4 py-3">Company</th>
               <th className="whitespace-nowrap px-4 py-3">Careers</th>
+              <th className="whitespace-nowrap px-4 py-3">Open roles</th>
+              <th className="px-4 py-3">Potential roles</th>
               <th className="whitespace-nowrap px-4 py-3">LinkedIn</th>
               <th className="px-4 py-3">Notes</th>
             </tr>
@@ -66,7 +72,7 @@ export function AppliedCompaniesTable({
             {filtered.length === 0 ? (
               <tr>
                 <td
-                  colSpan={4}
+                  colSpan={6}
                   className="px-4 py-10 text-center text-gray-500"
                 >
                   No companies match that search.
@@ -74,7 +80,7 @@ export function AppliedCompaniesTable({
               </tr>
             ) : (
               filtered.map((company) => (
-                <tr key={company.name} className="hover:bg-sky-50/40">
+                <tr key={company.name} className="align-top hover:bg-sky-50/40">
                   <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900">
                     {company.name}
                   </td>
@@ -83,6 +89,31 @@ export function AppliedCompaniesTable({
                       <ExternalLink href={company.careersPage}>
                         Careers
                       </ExternalLink>
+                    ) : (
+                      <span className="text-gray-400">—</span>
+                    )}
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3">
+                    {company.openRolesPage ? (
+                      <ExternalLink href={company.openRolesPage}>
+                        Job board
+                      </ExternalLink>
+                    ) : (
+                      <span className="text-gray-400">—</span>
+                    )}
+                  </td>
+                  <td className="max-w-sm px-4 py-3">
+                    {company.potentialUrls &&
+                    company.potentialUrls.length > 0 ? (
+                      <ul className="space-y-1">
+                        {company.potentialUrls.map((item) => (
+                          <li key={item.url + item.label}>
+                            <ExternalLink href={item.url}>
+                              {item.label}
+                            </ExternalLink>
+                          </li>
+                        ))}
+                      </ul>
                     ) : (
                       <span className="text-gray-400">—</span>
                     )}
@@ -97,7 +128,14 @@ export function AppliedCompaniesTable({
                     )}
                   </td>
                   <td className="max-w-md px-4 py-3 text-gray-600">
-                    {company.notes ?? ""}
+                    <div className="space-y-2">
+                      {company.notes ? <p>{company.notes}</p> : null}
+                      {company.rolesCheckNote ? (
+                        <p className="text-xs text-amber-800">
+                          {company.rolesCheckNote}
+                        </p>
+                      ) : null}
+                    </div>
                   </td>
                 </tr>
               ))
