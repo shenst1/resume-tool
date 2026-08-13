@@ -74,6 +74,15 @@ export default function Home() {
               AI leverage report for Owner.com (Scale Yourself)
             </p>
           </Link>
+          <Link
+            href="/applied"
+            className="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow border border-gray-200 border-sky-200 bg-sky-50/50"
+          >
+            <h2 className="text-xl font-semibold">Applied companies</h2>
+            <p className="text-gray-600 text-sm mt-1">
+              Table of employers, careers pages, and LinkedIn
+            </p>
+          </Link>
         </div>
         <h2 className="mb-4 text-lg font-semibold text-gray-700">Resumes</h2>
         <ResumeSlugTabs entries={resumeEntries} />
