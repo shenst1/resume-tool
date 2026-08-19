@@ -16,7 +16,17 @@ Draft only. Do not send. Do not invent a relationship.
 
 ## Who to write
 
-**Default: recruiter / TA / Head of People.** Message them first.
+**One person. One message.** Never draft two InMails, two greetings, or a recruiter copy plus an HM copy in the same turn.
+
+If the user pastes several LinkedIn URLs, pick **one** recipient:
+
+1. The person they labeled best / first / "message them."
+2. Else the clearest recruiter / TA / Head of People for this role.
+3. Else the first URL.
+
+Put the other URLs in **People notes** only. Do not write a second body.
+
+**Default: recruiter / TA / Head of People.**
 
 **Hiring manager only when both are true:** they are clearly the engineering (or role) manager, **and** they have a LinkedIn hiring badge. A TA person with a hiring badge for a different job is still the recruiter path.
 
@@ -40,13 +50,16 @@ If the LinkedIn URL or company is missing, ask once. Otherwise infer.
 
 ## Voice
 
-- Short, human, one dense paragraph plus the resume line. Same shape as Dan.
+- Short, human. Separate paragraphs with blank lines: greeting, careers sentence, proof, availability, resume line, sign-off.
+- **Do not introduce yourself.** No "Andrew Shenstone here" and no title line. LinkedIn already shows who is writing. Start with the careers sentence after the greeting.
 - No em dashes (see `.cursor/rules.md`).
 - No cover letter. No bullet dump. No fabricated referral.
 - Sign **Andrew**. Availability is always **10am-3pm PST Monday-Friday**.
-- Do not use Plantfolio, "sole engineer," MCP, or catalog-size stats as the proof line unless the user asks. Default proof: 12 years shipping fullstack on small product teams (React / TypeScript / Next.js). Add a true prior-company detail only when it matches the req (e.g. Tilia for payments).
+- Do not use Plantfolio, "sole engineer," MCP, or catalog-size stats as the proof line unless the user asks. Default proof: 12 years shipping fullstack on small product teams (React / TypeScript / Next.js). Add a true domain or prior-company detail only when it matches the req (e.g. fintech / Tilia for payments). Skip internal program or team nicknames from the posting (e.g. "Early Bets") unless they are in the role title.
 
-## Dan's template (source; keep this shape)
+## Dan's template (source; content beats only)
+
+Use Dan's beats (careers page, one proof line, availability, resume). Do **not** copy his self-intro or one-paragraph density.
 
 ```text
 Hi Andrew,
@@ -68,7 +81,12 @@ Dan
 
 ```text
 Hi [First name],
-Andrew Shenstone here, Senior Fullstack Engineer looking for a team and company I can make a big impact at. I viewed the careers page and see that [Company] is looking for a [exact role title] who can [1 short phrase from the live req]. Most recently [one proof sentence]. I'm available 10am-3pm PST Monday-Friday this week and I'd love to chat if you think I could be a good fit for [Company]'s team.
+
+I viewed the careers page and see that [Company] is looking for a [exact role title] who can [1 short phrase from the live req].
+
+Most recently [one proof sentence].
+
+I'm available 10am-3pm PST Monday-Friday this week and I'd love to chat if you think I could be a good fit for [Company]'s team.
 
 Here's my resume and contact info!
 
@@ -83,17 +101,17 @@ Andrew
 | `[First name]` | From LinkedIn. Never "Hiring Team." |
 | `[Company]` | Notion company name. |
 | `[exact role title]` | Exact title from Notion **Target role** / careers. |
-| `[1 short phrase from the live req]` | One clause, copied in spirit from the posting (pace, stack, ownership). Not a keyword list. |
-| `[one proof sentence]` | True and specific. No invented metrics. No Plantfolio-as-marker unless asked. Fold the user's extra fit reasons here, not as a second pitch paragraph. |
+| `[1 short phrase from the live req]` | One clause from the posting: stack, ownership, or 0-to-1. Not a keyword list. Not an internal initiative name. |
+| `[one proof sentence]` | True and specific. No invented metrics. No Plantfolio-as-marker unless asked. Fold domain fit here (e.g. fintech) when it is true, not as a second pitch paragraph. |
 
-Keep **looking for a team and company I can make a big impact at** and **Here's my resume and contact info!** as in Dan's note.
+Keep **Here's my resume and contact info!** as in Dan's note.
 
 ## Write it to Notion (every time)
 
 After drafting, put the paste-ready message in the **body** of that company's Prospects page. Do not only put it in chat.
 
 1. `fetch` the page first. Prefer `insert_content` (append). Do not `replace_content` unless the page is empty of anything you must keep.
-2. Append a section in this shape (replace if a LinkedIn message section for the same person already exists):
+2. Append **one** LinkedIn message section (replace if a section for this person already exists). Do not append a second section for a backup recruiter.
 
 ```markdown
 ## LinkedIn message
@@ -111,7 +129,9 @@ After drafting, put the paste-ready message in the **body** of that company's Pr
 
 ## Output in chat
 
-Subject line, then paste-ready LinkedIn message in a code block, plus the Notion page link. One sentence of context (who, which role, recruiter vs HM). If they are not connected, optionally add a **200-character connection note** that still names company + role; the full message is the default.
+Subject line, **one** paste-ready LinkedIn message in a single code block, plus the Notion page link. One sentence of context (who, which role, recruiter vs HM).
+
+Do not also paste a second copy for another person. Do not paste a connection note in chat unless InMail is unavailable (no Message button). If they are not connected but can InMail, skip the connection note. If a connection note is needed, keep it under 200 characters and name company + role; still only one extra block, never a second InMail.
 
 ## Example
 
@@ -119,7 +139,12 @@ Subject line, then paste-ready LinkedIn message in a code block, plus the Notion
 
 ```text
 Hi Janelle,
-Andrew Shenstone here, Senior Fullstack Engineer looking for a team and company I can make a big impact at. I viewed the careers page and see that Calendly is looking for a Growth Engineering Manager who can own product-facing fullstack work with a small team. Most recently I've spent 12 years shipping React and TypeScript on small product teams. I'm available 10am-3pm PST Monday-Friday this week and I'd love to chat if you think I could be a good fit for Calendly's team.
+
+I viewed the careers page and see that Calendly is looking for a Growth Engineering Manager who can own product-facing fullstack work with a small team.
+
+Most recently I've spent 12 years shipping React and TypeScript on small product teams.
+
+I'm available 10am-3pm PST Monday-Friday this week and I'd love to chat if you think I could be a good fit for Calendly's team.
 
 Here's my resume and contact info!
 
