@@ -80,7 +80,7 @@ export default function Home() {
           >
             <h2 className="text-xl font-semibold">Applied companies</h2>
             <p className="text-gray-600 text-sm mt-1">
-              Table of employers, careers pages, and LinkedIn
+              Tracking moved to Notion Prospects
             </p>
           </Link>
         </div>

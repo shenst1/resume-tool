@@ -2,7 +2,12 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { AppliedCompaniesFile } from "@/data/applied-companies-types";
 
-function resolveAppliedCompaniesPath(): string {
+const EMPTY_FILE: AppliedCompaniesFile = {
+  count: 0,
+  companies: [],
+};
+
+function resolveAppliedCompaniesPath(): string | null {
   const candidates = [
     join(process.cwd(), "..", "..", "applied-companies.json"),
     join(process.cwd(), "applied-companies.json"),
@@ -10,12 +15,12 @@ function resolveAppliedCompaniesPath(): string {
   for (const filePath of candidates) {
     if (existsSync(filePath)) return filePath;
   }
-  throw new Error(
-    "applied-companies.json not found. Expected at the profile-tools repo root.",
-  );
+  return null;
 }
 
 export function getAppliedCompaniesFile(): AppliedCompaniesFile {
-  const raw = readFileSync(resolveAppliedCompaniesPath(), "utf8");
+  const filePath = resolveAppliedCompaniesPath();
+  if (!filePath) return EMPTY_FILE;
+  const raw = readFileSync(filePath, "utf8");
   return JSON.parse(raw) as AppliedCompaniesFile;
 }

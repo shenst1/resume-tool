@@ -69,11 +69,6 @@ Navigate to `/jobs/[slug]` to view a specific resume. For example:
      skills: baseSkills, // or customize
      experience, // or customize
      companyReferences,
-     outreachEmail: {
-       label: "Technical recruiter (after applying; personalize [First name])",
-       subject: "[Role title] application / Andrew Shenstone",
-       body: "Hey [First name],\\n\\nI recently applied for [Role] at [Company] through your job portal. Same resume attached here.\\n\\n...",
-     }, // optional; shown in screen-only box with copy, hidden when printing
    };
    ```
 4. Export it from `src/data/resumes/index.ts`:
