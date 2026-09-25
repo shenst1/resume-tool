@@ -50,11 +50,14 @@ If the LinkedIn URL or company is missing, ask once. Otherwise infer.
 
 ## Voice
 
-- Short, human. Separate paragraphs with blank lines: greeting, careers sentence, proof, availability, resume line, sign-off.
+- Short, human. Separate paragraphs with blank lines: greeting, careers sentence, proof, availability, resume line, sign-off, then contact.
 - **Do not introduce yourself.** No "Andrew Shenstone here" and no title line. LinkedIn already shows who is writing. Start with the careers sentence after the greeting.
 - No em dashes (see `.cursor/rules.md`).
 - No cover letter. No bullet dump. No fabricated referral.
 - Sign **Andrew**. Availability is always **10am-3pm PST Monday-Friday**.
+- After the sign-off, always put contact on its own lines at the bottom:
+  - `shenst1@gmail.com`
+  - `339-223-0797`
 - Do not use Plantfolio, "sole engineer," MCP, or catalog-size stats as the proof line unless the user asks. Default proof: 12 years shipping fullstack on small product teams (React / TypeScript / Next.js). Add a true domain or prior-company detail only when it matches the req (e.g. fintech / Tilia for payments). Skip internal program or team nicknames from the posting (e.g. "Early Bets") unless they are in the role title.
 
 ## Dan's template (source; content beats only)
@@ -92,6 +95,9 @@ Here's my resume and contact info!
 
 Cheers,
 Andrew
+
+shenst1@gmail.com
+339-223-0797
 ```
 
 ### How to fill the blanks
@@ -104,7 +110,7 @@ Andrew
 | `[1 short phrase from the live req]` | One clause from the posting: stack, ownership, or 0-to-1. Not a keyword list. Not an internal initiative name. |
 | `[one proof sentence]` | True and specific. No invented metrics. No Plantfolio-as-marker unless asked. Fold domain fit here (e.g. fintech) when it is true, not as a second pitch paragraph. |
 
-Keep **Here's my resume and contact info!** as in Dan's note.
+Keep **Here's my resume and contact info!** as in Dan's note. Always end with email and phone under the sign-off.
 
 ## Write it to Notion (every time)
 
@@ -150,4 +156,7 @@ Here's my resume and contact info!
 
 Cheers,
 Andrew
+
+shenst1@gmail.com
+339-223-0797
 ```
