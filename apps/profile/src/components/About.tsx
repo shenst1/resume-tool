@@ -1,5 +1,5 @@
 import { profile } from "@/data/profile";
-import { ProfileImage } from "./ProfileImage";
+import { AboutLoopVisual } from "./visuals/AboutLoopVisual";
 
 export function About() {
   return (
@@ -23,11 +23,7 @@ export function About() {
             </p>
           </div>
           <div className="lg:pt-14">
-            <ProfileImage
-              {...profile.images.headshot}
-              aspect="square"
-              imageClassName="object-[center_20%]"
-            />
+            <AboutLoopVisual />
           </div>
         </div>
 
